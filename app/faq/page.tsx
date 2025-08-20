@@ -11,24 +11,24 @@ export default function FAQPage() {
       icon: MessageCircle,
       questions: [
         {
-          question: "Apa itu DigitalCraft dan layanan apa yang ditawarkan?",
+          question: "Apa itu vsal Studio dan layanan apa yang ditawarkan?",
           answer:
-            "DigitalCraft adalah digital agency yang menyediakan layanan lengkap mulai dari website development, logo design, branding, hingga social media content management. Kami membantu bisnis membangun dan mengembangkan presence digital mereka dengan solusi yang profesional dan hasil yang terukur.",
+            "vsal Studio adalah digital agency yang menyediakan layanan lengkap mulai dari website development, logo design, branding, hingga social media content management. Kami membantu bisnis membangun dan mengembangkan presence digital mereka dengan solusi yang profesional dan hasil yang terukur.",
         },
         {
-          question: "Bagaimana cara memulai project dengan DigitalCraft?",
+          question: "Bagaimana cara memulai project dengan vsal Studio?",
           answer:
             "Sangat mudah! Anda bisa menghubungi kami melalui website, email, atau WhatsApp untuk konsultasi gratis. Tim kami akan membantu menganalisis kebutuhan bisnis Anda dan merekomendasikan paket atau layanan yang paling sesuai dengan budget dan tujuan Anda.",
         },
         {
-          question: "Apakah DigitalCraft melayani klien dari luar kota atau luar negeri?",
+          question: "Apakah vsal Studio melayani klien dari luar kota atau luar negeri?",
           answer:
             "Ya, tentu saja! Kami melayani klien dari seluruh Indonesia bahkan internasional. Semua komunikasi dan koordinasi project dapat dilakukan secara online melalui video call, email, dan project management tools yang memudahkan kolaborasi jarak jauh.",
         },
         {
-          question: "Berapa lama pengalaman tim DigitalCraft di industri digital?",
+          question: "Berapa lama pengalaman tim vsal Studio di industri digital?",
           answer:
-            "Tim DigitalCraft memiliki pengalaman lebih dari 5 tahun di industri digital dengan portfolio 500+ project yang telah diselesaikan. Kami terdiri dari designer, developer, dan digital marketer berpengalaman yang selalu mengikuti perkembangan teknologi terbaru.",
+            "Tim vsal Studio memiliki pengalaman lebih dari 5 tahun di industri digital dengan portfolio 500+ project yang telah diselesaikan. Kami terdiri dari designer, developer, dan digital marketer berpengalaman yang selalu mengikuti perkembangan teknologi terbaru.",
         },
       ],
     },
@@ -151,7 +151,7 @@ export default function FAQPage() {
             "Kami menyediakan multiple channel support: WhatsApp untuk urgent issues (response <2 jam), email untuk general inquiries (response <24 jam), dan dedicated phone line untuk enterprise clients. Untuk critical issues, kami punya emergency response team yang standby 24/7.",
         },
         {
-          question: "Apakah tim DigitalCraft bisa training cara menggunakan website/CMS?",
+          question: "Apakah tim vsal Studio bisa training cara menggunakan website/CMS?",
           answer:
             "Ya, kami provide comprehensive training untuk semua klien. Training mencakup cara update content, upload gambar, manage products (untuk e-commerce), dan basic troubleshooting. Training bisa dilakukan via video call atau on-site visit (untuk klien Jakarta area).",
         },
@@ -171,7 +171,7 @@ export default function FAQPage() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="font-space-grotesk text-2xl font-bold text-secondary">
-              DigitalCraft
+              vsal Studio
             </Link>
             <div className="hidden md:flex items-center space-x-8">
               <Link href="/" className="text-foreground hover:text-primary transition-colors">
@@ -203,6 +203,7 @@ export default function FAQPage() {
               <ArrowLeft className="mr-2 h-4 w-4" />
               Back to Home
             </Link>
+            <br />
             <Badge className="mb-6 bg-primary/10 text-primary border-primary/20">Frequently Asked Questions</Badge>
             <h1 className="font-space-grotesk text-4xl md:text-6xl font-bold text-secondary mb-6">
               Got
@@ -281,7 +282,7 @@ export default function FAQPage() {
                 <h3 className="font-semibold text-secondary mb-2">Email</h3>
                 <p className="text-sm text-muted-foreground mb-4">Kirim pertanyaan detail via email</p>
                 <Button variant="outline" size="sm" className="bg-transparent">
-                  hello@digitalcraft.com
+                  hello@vsal Studio.com
                 </Button>
               </div>
             </div>
@@ -309,7 +310,7 @@ export default function FAQPage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <div className="font-space-grotesk text-2xl font-bold mb-4">DigitalCraft</div>
+              <div className="font-space-grotesk text-2xl font-bold mb-4">vsal Studio</div>
               <p className="text-accent-foreground/80 mb-4">
                 Creating digital experiences that drive results and inspire growth.
               </p>
@@ -339,7 +340,7 @@ export default function FAQPage() {
             <div>
               <h3 className="font-semibold mb-4">Connect</h3>
               <ul className="space-y-2 text-accent-foreground/80">
-                <li>hello@digitalcraft.com</li>
+                <li>hello@vsal Studio.com</li>
                 <li>+1 (555) 123-4567</li>
                 <li>LinkedIn</li>
                 <li>Instagram</li>
@@ -347,7 +348,7 @@ export default function FAQPage() {
             </div>
           </div>
           <div className="border-t border-accent-foreground/20 mt-8 pt-8 text-center text-accent-foreground/60">
-            <p>&copy; 2024 DigitalCraft. All rights reserved.</p>
+            <p>&copy; 2024 vsal Studio. All rights reserved.</p>
           </div>
         </div>
       </footer>

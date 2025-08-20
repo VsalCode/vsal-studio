@@ -285,7 +285,7 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="font-space-grotesk text-2xl font-bold text-secondary">
-              DigitalCraft
+              Vsal Studio
             </Link>
             <div className="hidden md:flex items-center space-x-8">
               <Link href="/" className="text-foreground hover:text-primary transition-colors">
@@ -317,6 +317,7 @@ export default function ServicesPage() {
               <ArrowLeft className="mr-2 h-4 w-4" />
               Back to Home
             </Link>
+            <br />
             <Badge className="mb-6 bg-primary/10 text-primary border-primary/20">Our Services</Badge>
             <h1 className="font-space-grotesk text-4xl md:text-6xl font-bold text-secondary mb-6">
               Complete Digital
@@ -413,7 +414,7 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <div className="font-space-grotesk text-2xl font-bold mb-4">DigitalCraft</div>
+              <div className="font-space-grotesk text-2xl font-bold mb-4">Vsal Studio</div>
               <p className="text-accent-foreground/80 mb-4">
                 Creating digital experiences that drive results and inspire growth.
               </p>
@@ -443,7 +444,7 @@ export default function ServicesPage() {
             <div>
               <h3 className="font-semibold mb-4">Connect</h3>
               <ul className="space-y-2 text-accent-foreground/80">
-                <li>hello@digitalcraft.com</li>
+                <li>hello@salstudio.com</li>
                 <li>+1 (555) 123-4567</li>
                 <li>LinkedIn</li>
                 <li>Instagram</li>
@@ -451,7 +452,7 @@ export default function ServicesPage() {
             </div>
           </div>
           <div className="border-t border-accent-foreground/20 mt-8 pt-8 text-center text-accent-foreground/60">
-            <p>&copy; 2024 DigitalCraft. All rights reserved.</p>
+            <p>&copy; 2024 Vsal Studio. All rights reserved.</p>
           </div>
         </div>
       </footer>

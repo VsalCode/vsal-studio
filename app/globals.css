@@ -45,6 +45,10 @@
   --font-dm-sans: "DM Sans", sans-serif;
 }
 
+button {
+  @apply cursor-pointer
+}
+
 .dark {
   --background: oklch(0.102 0 0);
   --foreground: oklch(1 0 0);

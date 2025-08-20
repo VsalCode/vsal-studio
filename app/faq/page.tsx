@@ -11,24 +11,24 @@ export default function FAQPage() {
       icon: MessageCircle,
       questions: [
         {
-          question: "Apa itu vsal Studio dan layanan apa yang ditawarkan?",
+          question: "Apa itu Vsal Studio dan layanan apa yang ditawarkan?",
           answer:
-            "vsal Studio adalah digital agency yang menyediakan layanan lengkap mulai dari website development, logo design, branding, hingga social media content management. Kami membantu bisnis membangun dan mengembangkan presence digital mereka dengan solusi yang profesional dan hasil yang terukur.",
+            "Vsal Studio adalah digital agency yang menyediakan layanan lengkap mulai dari website development, logo design, branding, hingga social media content management. Kami membantu bisnis membangun dan mengembangkan presence digital mereka dengan solusi yang profesional dan hasil yang terukur.",
         },
         {
-          question: "Bagaimana cara memulai project dengan vsal Studio?",
+          question: "Bagaimana cara memulai project dengan Vsal Studio?",
           answer:
             "Sangat mudah! Anda bisa menghubungi kami melalui website, email, atau WhatsApp untuk konsultasi gratis. Tim kami akan membantu menganalisis kebutuhan bisnis Anda dan merekomendasikan paket atau layanan yang paling sesuai dengan budget dan tujuan Anda.",
         },
         {
-          question: "Apakah vsal Studio melayani klien dari luar kota atau luar negeri?",
+          question: "Apakah Vsal Studio melayani klien dari luar kota atau luar negeri?",
           answer:
             "Ya, tentu saja! Kami melayani klien dari seluruh Indonesia bahkan internasional. Semua komunikasi dan koordinasi project dapat dilakukan secara online melalui video call, email, dan project management tools yang memudahkan kolaborasi jarak jauh.",
         },
         {
-          question: "Berapa lama pengalaman tim vsal Studio di industri digital?",
+          question: "Berapa lama pengalaman tim Vsal Studio di industri digital?",
           answer:
-            "Tim vsal Studio memiliki pengalaman lebih dari 5 tahun di industri digital dengan portfolio 500+ project yang telah diselesaikan. Kami terdiri dari designer, developer, dan digital marketer berpengalaman yang selalu mengikuti perkembangan teknologi terbaru.",
+            "Tim Vsal Studio memiliki pengalaman lebih dari 5 tahun di industri digital dengan portfolio 500+ project yang telah diselesaikan. Kami terdiri dari designer, developer, dan digital marketer berpengalaman yang selalu mengikuti perkembangan teknologi terbaru.",
         },
       ],
     },
@@ -151,7 +151,7 @@ export default function FAQPage() {
             "Kami menyediakan multiple channel support: WhatsApp untuk urgent issues (response <2 jam), email untuk general inquiries (response <24 jam), dan dedicated phone line untuk enterprise clients. Untuk critical issues, kami punya emergency response team yang standby 24/7.",
         },
         {
-          question: "Apakah tim vsal Studio bisa training cara menggunakan website/CMS?",
+          question: "Apakah tim Vsal Studio bisa training cara menggunakan website/CMS?",
           answer:
             "Ya, kami provide comprehensive training untuk semua klien. Training mencakup cara update content, upload gambar, manage products (untuk e-commerce), dan basic troubleshooting. Training bisa dilakukan via video call atau on-site visit (untuk klien Jakarta area).",
         },
@@ -166,31 +166,6 @@ export default function FAQPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="font-space-grotesk text-2xl font-bold text-secondary">
-              vsal Studio
-            </Link>
-            <div className="hidden md:flex items-center space-x-8">
-              <Link href="/" className="text-foreground hover:text-primary transition-colors">
-                Home
-              </Link>
-              <Link href="/services" className="text-foreground hover:text-primary transition-colors">
-                Services
-              </Link>
-              <Link href="/portfolio" className="text-foreground hover:text-primary transition-colors">
-                Portfolio
-              </Link>
-              <Link href="/faq" className="text-primary font-medium">
-                FAQ
-              </Link>
-              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">Get Started</Button>
-            </div>
-          </div>
-        </div>
-      </nav>
 
       {/* Header */}
       <section className="py-20 bg-gradient-to-br from-background to-muted">
@@ -263,14 +238,6 @@ export default function FAQPage() {
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="bg-background rounded-lg p-6 border border-border">
                 <MessageCircle className="h-8 w-8 text-primary mx-auto mb-4" />
-                <h3 className="font-semibold text-secondary mb-2">Live Chat</h3>
-                <p className="text-sm text-muted-foreground mb-4">Chat langsung dengan tim support kami</p>
-                <Button variant="outline" size="sm" className="bg-transparent">
-                  Start Chat
-                </Button>
-              </div>
-              <div className="bg-background rounded-lg p-6 border border-border">
-                <MessageCircle className="h-8 w-8 text-primary mx-auto mb-4" />
                 <h3 className="font-semibold text-secondary mb-2">WhatsApp</h3>
                 <p className="text-sm text-muted-foreground mb-4">Hubungi kami via WhatsApp</p>
                 <Button variant="outline" size="sm" className="bg-transparent">
@@ -282,7 +249,7 @@ export default function FAQPage() {
                 <h3 className="font-semibold text-secondary mb-2">Email</h3>
                 <p className="text-sm text-muted-foreground mb-4">Kirim pertanyaan detail via email</p>
                 <Button variant="outline" size="sm" className="bg-transparent">
-                  hello@vsal Studio.com
+                  hello@Vsal Studio.com
                 </Button>
               </div>
             </div>
@@ -310,7 +277,7 @@ export default function FAQPage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <div className="font-space-grotesk text-2xl font-bold mb-4">vsal Studio</div>
+              <div className="font-space-grotesk text-2xl font-bold mb-4">Vsal Studio</div>
               <p className="text-accent-foreground/80 mb-4">
                 Creating digital experiences that drive results and inspire growth.
               </p>
@@ -340,7 +307,7 @@ export default function FAQPage() {
             <div>
               <h3 className="font-semibold mb-4">Connect</h3>
               <ul className="space-y-2 text-accent-foreground/80">
-                <li>hello@vsal Studio.com</li>
+                <li>hello@Vsal Studio.com</li>
                 <li>+1 (555) 123-4567</li>
                 <li>LinkedIn</li>
                 <li>Instagram</li>
@@ -348,7 +315,7 @@ export default function FAQPage() {
             </div>
           </div>
           <div className="border-t border-accent-foreground/20 mt-8 pt-8 text-center text-accent-foreground/60">
-            <p>&copy; 2024 vsal Studio. All rights reserved.</p>
+            <p>&copy; 2024 Vsal Studio. All rights reserved.</p>
           </div>
         </div>
       </footer>

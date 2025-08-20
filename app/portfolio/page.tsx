@@ -73,31 +73,6 @@ export default function PortfolioPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="font-space-grotesk text-2xl font-bold text-secondary">
-              Vsal Studio
-            </Link>
-            <div className="hidden md:flex items-center space-x-8">
-              <Link href="/" className="text-foreground hover:text-primary transition-colors">
-                Home
-              </Link>
-              <Link href="/services" className="text-foreground hover:text-primary transition-colors">
-                Services
-              </Link>
-              <Link href="/portfolio" className="text-primary font-medium">
-                Portfolio
-              </Link>
-              <Link href="/faq" className="text-foreground hover:text-primary transition-colors">
-                FAQ
-              </Link>
-              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">Get Started</Button>
-            </div>
-          </div>
-        </div>
-      </nav>
 
       {/* Header */}
       <section className="py-20 bg-gradient-to-br from-background to-muted">
@@ -131,7 +106,7 @@ export default function PortfolioPage() {
             <p className="text-muted-foreground mb-6">Ikuti perkembangan project terbaru kami di Instagram</p>
             <div className="flex items-center justify-center gap-4 mb-8">
               <Instagram className="h-6 w-6 text-primary" />
-              <span className="text-lg font-medium text-secondary">@vsalstudio.agency</span>
+              <span className="text-lg font-medium text-secondary">@digitalcraft.agency</span>
             </div>
           </div>
 
@@ -141,7 +116,7 @@ export default function PortfolioPage() {
               <Instagram className="h-16 w-16 text-primary mx-auto mb-4" />
               <h3 className="font-space-grotesk text-2xl font-bold text-secondary mb-4">Instagram Feed Integration</h3>
               <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                Fitur ini akan menampilkan feed Instagram terbaru dari @vsalstudio.agency secara real-time.
+                Fitur ini akan menampilkan feed Instagram terbaru dari @digitalcraft.agency secara real-time.
                 Integration akan ditambahkan menggunakan Instagram Basic Display API.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
@@ -153,7 +128,7 @@ export default function PortfolioPage() {
               </div>
               <Button variant="outline" className="bg-transparent">
                 <Instagram className="mr-2 h-4 w-4" />
-                Follow @vsalstudio.agency
+                Follow @digitalcraft.agency
                 <ExternalLink className="ml-2 h-4 w-4" />
               </Button>
             </div>
@@ -289,7 +264,7 @@ export default function PortfolioPage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <div className="font-space-grotesk text-2xl font-bold mb-4">Vsal Studio</div>
+              <div className="font-space-grotesk text-2xl font-bold mb-4">DigitalCraft</div>
               <p className="text-accent-foreground/80 mb-4">
                 Creating digital experiences that drive results and inspire growth.
               </p>
@@ -319,7 +294,7 @@ export default function PortfolioPage() {
             <div>
               <h3 className="font-semibold mb-4">Connect</h3>
               <ul className="space-y-2 text-accent-foreground/80">
-                <li>hello@vsalstudio.com</li>
+                <li>hello@digitalcraft.com</li>
                 <li>+1 (555) 123-4567</li>
                 <li>LinkedIn</li>
                 <li>Instagram</li>
@@ -327,7 +302,7 @@ export default function PortfolioPage() {
             </div>
           </div>
           <div className="border-t border-accent-foreground/20 mt-8 pt-8 text-center text-accent-foreground/60">
-            <p>&copy; 2024 Vsal Studio. All rights reserved.</p>
+            <p>&copy; 2024 DigitalCraft. All rights reserved.</p>
           </div>
         </div>
       </footer>

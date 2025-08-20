@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import Marquee from "@/components/marquee"
-import { ArrowRight, Award, Globe, Palette, Package } from "lucide-react"
+import { ArrowRight, Package, Globe, Palette, Award } from "lucide-react"
 import Link from "next/link"
 
 export default function HomePage() {
@@ -14,116 +14,13 @@ export default function HomePage() {
     { name: "DigitalPro", logo: "/digital-pro-logo.png" },
   ]
 
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "CEO, TechStartup Inc.",
-      image: "/professional-ceo-woman.png",
-      content: "Vsal Studio transformed our online presence completely. The Paket Ambisius was perfect for our growing startup. Website yang mereka buat tidak hanya beautiful tapi juga conversion rate kami naik 300%!"
-    },
-    {
-      name: "Michael Chen", 
-      role: "Marketing Director, GrowthLab",
-      image: "/professional-marketing-director.png",
-      content: "Tim Vsal Studio sangat profesional dan responsive. Logo design dan branding package yang mereka buat benar-benar mencerminkan nilai perusahaan kami. Highly recommended!"
-    },
-    {
-      name: "Amanda Rodriguez",
-      role: "Founder, EcoFashion Store", 
-      image: "/professional-business-woman-founder.png",
-      content: "E-commerce website yang dibuat Vsal Studio sangat user-friendly dan sales kami meningkat drastis. Customer support mereka juga excellent, selalu siap membantu kapan saja."
-    },
-    {
-      name: "David Kim",
-      role: "Owner, Kimchi House Restaurant",
-      image: "/professional-restaurant-owner.png", 
-      content: "POS web app yang mereka develop sangat membantu operasional restaurant kami. Inventory management jadi lebih mudah dan laporan penjualan real-time sangat berguna untuk decision making."
-    },
-    {
-      name: "Lisa Thompson",
-      role: "Creative Director, ArtSpace Gallery",
-      image: "/professional-creative-director.png",
-      content: "Social media content management dari Vsal Studio luar biasa! Engagement rate Instagram kami naik 250% dan follower bertambah organik. Content mereka selalu on-brand dan engaging."
-    },
-    {
-      name: "James Wilson", 
-      role: "Entrepreneur, InnovateTech",
-      image: "/professional-tech-entrepreneur.png",
-      content: "Paket Pesugihan benar-benar worth it! Custom web application yang mereka buat sesuai banget dengan business flow kami. ROI dari investment ini sudah balik dalam 6 bulan pertama."
-    }
-  ]
-
-  const services = [
-    {
-      icon: <Package className="h-8 w-8" />,
-      title: "Paket Bundling", 
-      description: "Solusi lengkap mulai dari Paket Perintis untuk startup hingga Paket Pesugihan untuk enterprise",
-      features: [
-        "Website + Logo + Social Media",
-        "Paket hemat untuk semua kebutuhan", 
-        "Support dan maintenance included"
-      ],
-      link: "/services#bundling"
-    },
-    {
-      icon: <Globe className="h-8 w-8" />,
-      title: "Website Development",
-      description: "Dari landing page sederhana hingga aplikasi web kompleks dengan fitur custom", 
-      features: [
-        "Landing Page & Static Website",
-        "E-commerce & POS Web App",
-        "Custom Web Development"
-      ],
-      link: "/services#website"
-    },
-    {
-      icon: <Palette className="h-8 w-8" />,
-      title: "Design Services",
-      description: "Identitas visual yang kuat mulai dari logo design hingga complete branding",
-      features: [
-        "Logo Design & Branding", 
-        "Social Media Content",
-        "Brand Guidelines & Identity"
-      ],
-      link: "/services#design"
-    }
-  ]
-
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="font-space-grotesk text-2xl font-bold text-secondary">Vsal Studio</div>
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="#home" className="text-foreground hover:text-primary transition-colors">
-                Home
-              </a>
-              <a href="#about" className="text-foreground hover:text-primary transition-colors">
-                About
-              </a>
-              <a href="#services" className="text-foreground hover:text-primary transition-colors">
-                Services
-              </a>
-              <a href="#clients" className="text-foreground hover:text-primary transition-colors">
-                Clients
-              </a>
-              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                Get Started
-              </Button>
-            </div>
-          </div>
-        </div>
-      </nav>
-
       {/* Hero Banner */}
       <section id="home" className="py-20 lg:py-32 bg-gradient-to-br from-background to-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-6 bg-primary/10 text-primary border-primary/20">
-              Digital Solutions That Work
-            </Badge>
+            <Badge className="mb-6 bg-primary/10 text-primary border-primary/20">Digital Solutions That Work</Badge>
             <h1 className="font-space-grotesk text-4xl md:text-6xl lg:text-7xl font-bold text-secondary mb-6">
               Transform Your
               <span className="text-primary block">Digital Presence</span>
@@ -153,11 +50,9 @@ export default function HomePage() {
       <section id="clients" className="py-16 bg-muted">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="font-space-grotesk text-3xl font-bold text-secondary mb-4">
-              Trusted by Leading Brands
-            </h2>
+            <h2 className="font-space-grotesk text-3xl font-bold text-secondary mb-4">Trusted by Leading Brands</h2>
             <p className="text-muted-foreground">
-              Join hundreds of satisfied clients whove transformed their digital presence
+              Join hundreds of satisfied clients who ve transformed their digital presence
             </p>
           </div>
           <Marquee pauseOnHover className="[--duration:30s]">
@@ -180,14 +75,12 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <Badge className="mb-6 bg-primary/10 text-primary border-primary/20">
-                  About Vsal Studio
-                </Badge>
+                <Badge className="mb-6 bg-primary/10 text-primary border-primary/20">About Vsal Studio</Badge>
                 <h2 className="font-space-grotesk text-4xl font-bold text-secondary mb-6">
                   We Create Digital Experiences That Matter
                 </h2>
                 <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-                  With over 5 years of experience in digital design and development, we helped hundreds of businesses
+                  With over 5 years of experience in digital design and development, we ve helped hundreds of businesses
                   establish their online presence and grow their digital footprint.
                 </p>
                 <p className="text-muted-foreground mb-8 leading-relaxed">
@@ -206,11 +99,7 @@ export default function HomePage() {
                 </div>
               </div>
               <div className="relative">
-                <img 
-                  src="/digital-agency-team.png" 
-                  alt="Our team at work" 
-                  className="rounded-lg shadow-2xl w-full"
-                />
+                <img src="/digital-agency-team.png" alt="Our team at work" className="rounded-lg shadow-2xl" />
                 <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-6 rounded-lg shadow-lg">
                   <Award className="h-8 w-8 mb-2" />
                   <div className="font-semibold">Award Winning</div>
@@ -226,49 +115,111 @@ export default function HomePage() {
       <section id="services" className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <Badge className="mb-6 bg-primary/10 text-primary border-primary/20">
-              Our Services
-            </Badge>
-            <h2 className="font-space-grotesk text-4xl font-bold text-secondary mb-6">
-              Complete Digital Solutions
-            </h2>
+            <Badge className="mb-6 bg-primary/10 text-primary border-primary/20">Our Services</Badge>
+            <h2 className="font-space-grotesk text-4xl font-bold text-secondary mb-6">Complete Digital Solutions</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Dari website development hingga branding lengkap, kami menyediakan semua yang Anda butuhkan untuk sukses digital
+              Dari website development hingga branding lengkap, kami menyediakan semua yang Anda butuhkan untuk sukses
+              digital
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
-            {services.map((service, index) => (
-              <div key={index} className="bg-background rounded-lg p-8 shadow-sm border border-border hover:shadow-md transition-shadow">
-                <div className="text-primary mb-4">
-                  {service.icon}
-                </div>
-                <h3 className="font-space-grotesk text-2xl font-bold text-secondary mb-4">
-                  {service.title}
-                </h3>
-                <p className="text-muted-foreground mb-6">
-                  {service.description}
-                </p>
-                <ul className="text-sm text-muted-foreground space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex}>• {feature}</li>
-                  ))}
-                </ul>
-                <Link href={service.link}>
-                  <Button variant="outline" className="w-full bg-transparent">
-                    Lihat {service.title.split(' ')[0]} {service.title.includes('Services') ? 'Services' : service.title.includes('Development') ? 'Services' : 'Bundling'}
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
+            <div className="bg-background rounded-lg p-8 shadow-sm border border-border hover:shadow-md transition-shadow group">
+              <div className="text-primary mb-4 group-hover:scale-110 transition-transform duration-200">
+                <Package className="h-12 w-12" />
               </div>
-            ))}
+              <h3 className="font-space-grotesk text-2xl font-bold text-secondary mb-4">Paket Bundling</h3>
+              <p className="text-muted-foreground mb-6">
+                Solusi lengkap mulai dari Paket Perintis untuk startup hingga Paket Pesugihan untuk enterprise
+              </p>
+              <ul className="text-sm text-muted-foreground space-y-2 mb-6">
+                <li className="flex items-center">
+                  <span className="text-primary mr-2">•</span>
+                  Website + Logo + Social Media
+                </li>
+                <li className="flex items-center">
+                  <span className="text-primary mr-2">•</span>
+                  Paket hemat untuk semua kebutuhan
+                </li>
+                <li className="flex items-center">
+                  <span className="text-primary mr-2">•</span>
+                  Support dan maintenance included
+                </li>
+              </ul>
+              <Link href="/services#bundling">
+                <Button variant="outline" className="w-full bg-transparent hover:bg-primary hover:text-primary-foreground group">
+                  Lihat Paket Bundling
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+            </div>
+
+            <div className="bg-background rounded-lg p-8 shadow-sm border border-border hover:shadow-md transition-shadow group">
+              <div className="text-primary mb-4 group-hover:scale-110 transition-transform duration-200">
+                <Globe className="h-12 w-12" />
+              </div>
+              <h3 className="font-space-grotesk text-2xl font-bold text-secondary mb-4">Website Development</h3>
+              <p className="text-muted-foreground mb-6">
+                Dari landing page sederhana hingga aplikasi web kompleks dengan fitur custom
+              </p>
+              <ul className="text-sm text-muted-foreground space-y-2 mb-6">
+                <li className="flex items-center">
+                  <span className="text-primary mr-2">•</span>
+                  Landing Page & Static Website
+                </li>
+                <li className="flex items-center">
+                  <span className="text-primary mr-2">•</span>
+                  E-commerce & POS Web App
+                </li>
+                <li className="flex items-center">
+                  <span className="text-primary mr-2">•</span>
+                  Custom Web Development
+                </li>
+              </ul>
+              <Link href="/services#website">
+                <Button variant="outline" className="w-full bg-transparent hover:bg-primary hover:text-primary-foreground group">
+                  Lihat Website Services
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+            </div>
+
+            <div className="bg-background rounded-lg p-8 shadow-sm border border-border hover:shadow-md transition-shadow group">
+              <div className="text-primary mb-4 group-hover:scale-110 transition-transform duration-200">
+                <Palette className="h-12 w-12" />
+              </div>
+              <h3 className="font-space-grotesk text-2xl font-bold text-secondary mb-4">Design Services</h3>
+              <p className="text-muted-foreground mb-6">
+                Identitas visual yang kuat mulai dari logo design hingga complete branding
+              </p>
+              <ul className="text-sm text-muted-foreground space-y-2 mb-6">
+                <li className="flex items-center">
+                  <span className="text-primary mr-2">•</span>
+                  Logo Design & Branding
+                </li>
+                <li className="flex items-center">
+                  <span className="text-primary mr-2">•</span>
+                  Social Media Content
+                </li>
+                <li className="flex items-center">
+                  <span className="text-primary mr-2">•</span>
+                  Brand Guidelines & Identity
+                </li>
+              </ul>
+              <Link href="/services#design">
+                <Button variant="outline" className="w-full bg-transparent hover:bg-primary hover:text-primary-foreground group">
+                  Lihat Design Services
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+            </div>
           </div>
 
           <div className="text-center">
             <Link href="/services">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground group">
                 Lihat Semua Services & Pricing
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
           </div>
@@ -279,39 +230,131 @@ export default function HomePage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <Badge className="mb-6 bg-primary/10 text-primary border-primary/20">
-              Client Testimonials
-            </Badge>
-            <h2 className="font-space-grotesk text-4xl font-bold text-secondary mb-6">
-              What Our Clients Say
-            </h2>
+            <Badge className="mb-6 bg-primary/10 text-primary border-primary/20">Client Testimonials</Badge>
+            <h2 className="font-space-grotesk text-4xl font-bold text-secondary mb-6">What Our Clients Say</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               Dengarkan langsung dari klien yang telah merasakan transformasi digital bersama kami
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-background rounded-lg p-8 shadow-sm border border-border">
-                <div className="flex items-center mb-6">
-                  <img 
-                    src={testimonial.image} 
-                    alt={testimonial.name} 
-                    className="w-12 h-12 rounded-full mr-4 object-cover" 
-                  />
-                  <div>
-                    <h4 className="font-semibold text-secondary">{testimonial.name}</h4>
-                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                  </div>
-                </div>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  {testimonial.content}
-                </p>
-                <div className="flex text-primary">
-                  <span>★★★★★</span>
+            <div className="bg-background rounded-lg p-8 shadow-sm border border-border">
+              <div className="flex items-center mb-6">
+                <img src="/professional-ceo-woman.png" alt="Sarah Johnson" className="w-15 h-15 rounded-full mr-4" />
+                <div>
+                  <h4 className="font-semibold text-secondary">Sarah Johnson</h4>
+                  <p className="text-sm text-muted-foreground">CEO, TechStartup Inc.</p>
                 </div>
               </div>
-            ))}
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Vsal Studio transformed our online presence completely. The Paket Ambisius was perfect for our growing
+                startup. Website yang mereka buat tidak hanya beautiful tapi juga conversion rate kami naik 300%!
+              </p>
+              <div className="flex text-primary">
+                <span>★★★★★</span>
+              </div>
+            </div>
+
+            <div className="bg-background rounded-lg p-8 shadow-sm border border-border">
+              <div className="flex items-center mb-6">
+                <img
+                  src="/professional-marketing-director.png"
+                  alt="Michael Chen"
+                  className="w-15 h-15 rounded-full mr-4"
+                />
+                <div>
+                  <h4 className="font-semibold text-secondary">Michael Chen</h4>
+                  <p className="text-sm text-muted-foreground">Marketing Director, GrowthLab</p>
+                </div>
+              </div>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Tim Vsal Studio sangat profesional dan responsive. Logo design dan branding package yang mereka buat
+                benar-benar mencerminkan nilai perusahaan kami. Highly recommended!
+              </p>
+              <div className="flex text-primary">
+                <span>★★★★★</span>
+              </div>
+            </div>
+
+            <div className="bg-background rounded-lg p-8 shadow-sm border border-border">
+              <div className="flex items-center mb-6">
+                <img
+                  src="/professional-business-woman-founder.png"
+                  alt="Amanda Rodriguez"
+                  className="w-15 h-15 rounded-full mr-4"
+                />
+                <div>
+                  <h4 className="font-semibold text-secondary">Amanda Rodriguez</h4>
+                  <p className="text-sm text-muted-foreground">Founder, EcoFashion Store</p>
+                </div>
+              </div>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                E-commerce website yang dibuat Vsal Studio sangat user-friendly dan sales kami meningkat drastis.
+                Customer support mereka juga excellent, selalu siap membantu kapan saja.
+              </p>
+              <div className="flex text-primary">
+                <span>★★★★★</span>
+              </div>
+            </div>
+
+            <div className="bg-background rounded-lg p-8 shadow-sm border border-border">
+              <div className="flex items-center mb-6">
+                <img src="/professional-restaurant-owner.png" alt="David Kim" className="w-15 h-15 rounded-full mr-4" />
+                <div>
+                  <h4 className="font-semibold text-secondary">David Kim</h4>
+                  <p className="text-sm text-muted-foreground">Owner, Kimchi House Restaurant</p>
+                </div>
+              </div>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                POS web app yang mereka develop sangat membantu operasional restaurant kami. Inventory management jadi
+                lebih mudah dan laporan penjualan real-time sangat berguna untuk decision making.
+              </p>
+              <div className="flex text-primary">
+                <span>★★★★★</span>
+              </div>
+            </div>
+
+            <div className="bg-background rounded-lg p-8 shadow-sm border border-border">
+              <div className="flex items-center mb-6">
+                <img
+                  src="/professional-creative-director.png"
+                  alt="Lisa Thompson"
+                  className="w-15 h-15 rounded-full mr-4"
+                />
+                <div>
+                  <h4 className="font-semibold text-secondary">Lisa Thompson</h4>
+                  <p className="text-sm text-muted-foreground">Creative Director, ArtSpace Gallery</p>
+                </div>
+              </div>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Social media content management dari Vsal Studio luar biasa! Engagement rate Instagram kami naik 250%
+                dan follower bertambah organik. Content mereka selalu on-brand dan engaging.
+              </p>
+              <div className="flex text-primary">
+                <span>★★★★★</span>
+              </div>
+            </div>
+
+            <div className="bg-background rounded-lg p-8 shadow-sm border border-border">
+              <div className="flex items-center mb-6">
+                <img
+                  src="/professional-tech-entrepreneur.png"
+                  alt="James Wilson"
+                  className="w-15 h-15 rounded-full mr-4"
+                />
+                <div>
+                  <h4 className="font-semibold text-secondary">James Wilson</h4>
+                  <p className="text-sm text-muted-foreground">Entrepreneur, InnovateTech</p>
+                </div>
+              </div>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Paket Pesugihan benar-benar worth it! Custom web application yang mereka buat sesuai banget dengan
+                business flow kami. ROI dari investment ini sudah balik dalam 6 bulan pertama.
+              </p>
+              <div className="flex text-primary">
+                <span>★★★★★</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -324,7 +367,7 @@ export default function HomePage() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-secondary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
-              Lets discuss your project and create something amazing together. Get in touch for a free consultation.
+              Let s discuss your project and create something amazing together. Get in touch for a free consultation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
@@ -342,50 +385,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="py-12 bg-accent text-accent-foreground">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="font-space-grotesk text-2xl font-bold mb-4">Vsal Studio</div>
-              <p className="text-accent-foreground/80 mb-4">
-                Creating digital experiences that drive results and inspire growth.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-4">Services</h3>
-              <ul className="space-y-2 text-accent-foreground/80">
-                <li>Website Development</li>
-                <li>Logo Design</li>
-                <li>Social Media</li>
-                <li>Bundling Packages</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-4">Company</h3>
-              <ul className="space-y-2 text-accent-foreground/80">
-                <li>About Us</li>
-                <li>Our Work</li>
-                <li>Careers</li>
-                <li>Contact</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-4">Connect</h3>
-              <ul className="space-y-2 text-accent-foreground/80">
-                <li>hello@vsalstudio.com</li>
-                <li>+1 (555) 123-4567</li>
-                <li>LinkedIn</li>
-                <li>Instagram</li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-accent-foreground/20 mt-8 pt-8 text-center text-accent-foreground/60">
-            <p>&copy; 2024 Vsal Studio. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }

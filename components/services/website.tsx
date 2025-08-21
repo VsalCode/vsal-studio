@@ -6,7 +6,7 @@ export const Website = () => {
     {
       title: "Landing Page",
       description: "Single page website yang powerful",
-      price: "$799",
+      price: "Rp 599k",
       features: [
         {
           title: "Responsive Design",
@@ -29,7 +29,7 @@ export const Website = () => {
     {
       title: "Static Website",
       description: "Website multi-halaman untuk company profile",
-      price: "$1,499",
+      price: "Rp. 950k",
       popular: true,
       features: [
         {
@@ -53,7 +53,7 @@ export const Website = () => {
     {
       title: "E-commerce Website",
       description: "Toko online lengkap dengan sistem pembayaran",
-      price: "$2,999",
+      price: "Rp. 3 jt",
       features: [
         {
           title: "Product Catalog",
@@ -76,7 +76,7 @@ export const Website = () => {
     {
       title: "POS Web App",
       description: "Aplikasi Point of Sale berbasis web",
-      price: "$3,999",
+      price: "Rp. 1.2 JT",
       features: [
         {
           title: "Sales Management",

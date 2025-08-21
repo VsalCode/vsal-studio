@@ -7,7 +7,7 @@ export const Design = () => {
     {
       title: "Logo Design",
       description: "Identitas visual yang memorable",
-      price: "$599",
+      price: "Rp 249k",
       popular: true,
       features: [
         {
@@ -31,7 +31,7 @@ export const Design = () => {
     {
       title: "Social Media Content",
       description: "Konten engaging untuk semua platform",
-      price: "$899/bulan",
+      price: "Rp 750k/bulan",
       features: [
         {
           title: "Content Planning",
@@ -54,7 +54,7 @@ export const Design = () => {
     {
       title: "Complete Branding",
       description: "Paket branding lengkap untuk identitas bisnis",
-      price: "$1,999",
+      price: "Rp 1.2 JT",
       features: [
         {
           title: "Brand Strategy",

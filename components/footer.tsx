@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <Link href="/" className="font-space-grotesk text-2xl font-bold mb-4 block">
-              DigitalCraft
+              Vsal Studio
             </Link>
             <p className="text-accent-foreground/80 mb-4">
               Creating digital experiences that drive results and inspire growth.
@@ -61,15 +61,27 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Connect</h3>
             <ul className="space-y-2 text-accent-foreground/80">
-              <li>hello@digitalcraft.com</li>
-              <li>+1 (555) 123-4567</li>
-              <li>LinkedIn</li>
-              <li>Instagram</li>
+              <li>
+                <Link href="https://instagram.com/vsal_studio" target="_blank" rel="noopener noreferrer">
+                  @vsal_studio
+                </Link>
+              </li>
+              <li>
+                <Link href="https://wa.me/6281399090477" target="_blank" rel="noopener noreferrer">
+                  ( +62 ) 812-3456-7890
+                </Link>
+              </li>
+              <li>
+                <Link href="mailto:studiovsal@gmail.com">
+                  studiovsal@gmail.com
+                </Link>
+              </li>
+
             </ul>
           </div>
         </div>
         <div className="border-t border-accent-foreground/20 mt-8 pt-8 text-center text-accent-foreground/60">
-          <p>&copy; 2024 Vsal Studio. All rights reserved.</p>
+          <p>&copy; 2021 Vsal Studio. All rights reserved.</p>
         </div>
       </div>
     </footer>

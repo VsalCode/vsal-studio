@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button } from './ui/button'
 import { ArrowRight } from 'lucide-react'
+import Link from 'next/link'
 
 export const CTA = () => {
   return (
@@ -14,17 +15,13 @@ export const CTA = () => {
             Let s discuss your project and create something amazing together. Get in touch for a free consultation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-              Start Your Project
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-secondary-foreground/20 text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary bg-transparent"
-            >
-              Schedule a Call
-            </Button>
+            <Link href="https://wa.me/6281399090477" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                Start Your Project
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+
           </div>
         </div>
       </div>

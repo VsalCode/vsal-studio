@@ -4,6 +4,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Check } from "lucide-react"
+import Link from "next/link"
 
 interface ServiceFeature {
   title: string
@@ -47,7 +48,9 @@ export default function ServiceCard({ title, description, price, features, popul
             </AccordionItem>
           ))}
         </Accordion>
-        <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">Get Started</Button>
+        <Link href="https://wa.me/6281399090477" target="_blank" rel="noopener noreferrer">
+          <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">Get Started</Button>
+        </Link>
       </CardContent>
     </Card>
   )

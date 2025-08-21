@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { ArrowLeft, ArrowRight, MessageCircle, Clock, CreditCard, Palette, Code, Users } from "lucide-react"
+import { ArrowRight, MessageCircle, Clock, CreditCard, Palette, Code, Users } from "lucide-react"
 import Link from "next/link"
+import { HeaderSection } from "@/components/header-section"
 
 export default function FAQPage() {
   const faqCategories = [
@@ -167,29 +167,12 @@ export default function FAQPage() {
   return (
     <div className="min-h-screen bg-background">
 
-      {/* Header */}
-      <section className="py-20 bg-gradient-to-br from-background to-muted">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <Link
-              href="/"
-              className="inline-flex items-center text-muted-foreground hover:text-primary transition-colors mb-6"
-            >
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              Back to Home
-            </Link>
-            <br />
-            <Badge className="mb-6 bg-primary/10 text-primary border-primary/20">Frequently Asked Questions</Badge>
-            <h1 className="font-space-grotesk text-4xl md:text-6xl font-bold text-secondary mb-6">
-              Got
-              <span className="text-primary block">Questions?</span>
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-              Temukan jawaban untuk pertanyaan yang paling sering ditanyakan tentang layanan dan proses kerja kami
-            </p>
-          </div>
-        </div>
-      </section>
+      <HeaderSection
+      chip="Frequently Asked Questions"
+      title1="Got"
+      title2="Questions?"
+      desc="Temukan jawaban untuk pertanyaan yang paling sering ditanyakan tentang layanan dan proses kerja kami"
+      />
 
       {/* FAQ Categories */}
       <section className="py-20">
@@ -272,53 +255,6 @@ export default function FAQPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-12 bg-accent text-accent-foreground">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="font-space-grotesk text-2xl font-bold mb-4">Vsal Studio</div>
-              <p className="text-accent-foreground/80 mb-4">
-                Creating digital experiences that drive results and inspire growth.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-4">Services</h3>
-              <ul className="space-y-2 text-accent-foreground/80">
-                <li>Website Development</li>
-                <li>Logo Design</li>
-                <li>Social Media</li>
-                <li>Bundling Packages</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-4">Company</h3>
-              <ul className="space-y-2 text-accent-foreground/80">
-                <li>
-                  <Link href="/">About Us</Link>
-                </li>
-                <li>
-                  <Link href="/portfolio">Our Work</Link>
-                </li>
-                <li>Careers</li>
-                <li>Contact</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-4">Connect</h3>
-              <ul className="space-y-2 text-accent-foreground/80">
-                <li>hello@Vsal Studio.com</li>
-                <li>+1 (555) 123-4567</li>
-                <li>LinkedIn</li>
-                <li>Instagram</li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-accent-foreground/20 mt-8 pt-8 text-center text-accent-foreground/60">
-            <p>&copy; 2024 Vsal Studio. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }

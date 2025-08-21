@@ -18,7 +18,10 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "Digital Agency - Creative Solutions for Your Business",
+  title: "Vsal Studio® - Creative Solutions for Your Business",
+  icons: {
+    icon: "/logo-vsal.png", 
+  },
   description:
     "Professional digital agency offering web development, logo design, social media management, and bundling services.",
   generator: "v0.app",

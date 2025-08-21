@@ -11,7 +11,7 @@ interface MarqueeProps {
   children?: React.ReactNode
   vertical?: boolean
   repeat?: number
-  [key: string]: any
+  // [key: string]: any
 }
 
 export default function Marquee({
@@ -27,7 +27,7 @@ export default function Marquee({
     <div
       {...props}
       className={cn(
-        "group flex overflow-hidden p-2 [--duration:40s] [--gap:1rem] [gap:var(--gap)]",
+        "group flex overflow-hidden p-2 [--duration:40s] [--gap:0.5rem] [gap:var(--gap)]", // Ubah dari 1rem ke 0.5rem
         {
           "flex-row": !vertical,
           "flex-col": vertical,

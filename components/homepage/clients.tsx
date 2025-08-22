@@ -1,5 +1,4 @@
-import React from 'react'
-import Marquee from '../marquee'
+import Marquee from "../marquee"
 
 export const Clients = () => {
   const clients = [
@@ -36,11 +35,11 @@ export const Clients = () => {
         </div>
         <Marquee pauseOnHover className="[--duration:30s]">
           {clients.map((client, index) => (
-            <div key={index} className="flex items-center justify-center mx-8">
+            <div key={index} className="flex items-center justify-center mx-3">
               <img
                 src={client.logo || "/placeholder.svg"}
                 alt={`${client.name} logo`}
-                className="h-17 w-auto opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+                className="h-16 sm:h-20 md:h-28 w-auto max-w-[140px] sm:max-w-[160px] md:max-w-[200px] opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 object-contain"
               />
             </div>
           ))}

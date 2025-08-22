@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import React from 'react'
 import { Button } from '../ui/button'
-import { ArrowRight, Badge, Globe, Package, Palette } from 'lucide-react'
+import { ArrowRight, Globe, Package, Palette } from 'lucide-react'
+import { Badge } from '../ui/badge'
 
 const servicesData = [
   {

@@ -12,8 +12,8 @@ export default function HomePage() {
       <Banner/>
       <AboutUs/>
       <Clients/>
-      <Services/>
       {/* <Testimonials/> */}
+      <Services/>
       <CTA/>
     </main>
   )

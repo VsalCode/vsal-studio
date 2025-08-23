@@ -1,5 +1,5 @@
-import { Badge } from 'lucide-react'
 import React from 'react'
+import { Badge } from '../ui/badge'
 
 export const Testimonials = () => {
   return (

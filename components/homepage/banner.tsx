@@ -46,8 +46,7 @@ export const Banner = () => {
             </span>
           </h1>
           <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto leading-relaxed">
-            We create stunning websites, memorable brands, and engaging social media content that drives real results
-            for your business.
+            bantu bisnis kamu tampil lebih standout lewat website yang menarik, identitas brand yang kuat, dan konten sosial media yang engage audiens.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button

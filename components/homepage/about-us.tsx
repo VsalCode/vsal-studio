@@ -14,12 +14,10 @@ export const AboutUs = () => {
                 We Create Digital Experiences That Matter
               </h2>
               <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-                With over 3 years of experience in digital design and development, we ve helped hundreds of businesses
-                establish their online presence and grow their digital footprint.
+                Berbekal pengalaman lebih dari 3 tahun, kami sudah dipercaya ratusan bisnis untuk membangun kehadiran digital dan memperluas jangkauan mereka.
               </p>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                Our team combines creative vision with technical expertise to deliver solutions that not only look
-                great but also drive real business results.
+                Setiap solusi yang kami buat lahir dari kombinasi kreativitas dan keahlian teknis, sehingga hasilnya bukan cuma bagus dilihat, tapi juga berdampak nyata untuk pertumbuhan bisnis.
               </p>
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">

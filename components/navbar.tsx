@@ -1,74 +1,71 @@
+// src/components/Navbar.tsx
 "use client"
 
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { useState, useEffect } from "react"
-import { Menu, X, Code, Palette, Package, ChevronDown, Home, Briefcase, HelpCircle } from "lucide-react"
+import { Menu, X, Code, Palette, Package, ChevronDown, Home, HelpCircle } from "lucide-react"
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-
+    const handleScroll = () => setIsScrolled(window.scrollY > 50)
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const services = [
+  /* 1. Data Desktop Navigation (dari array) */
+  const desktopNavItems = [
+    { name: "Home", href: "/" },
     {
-      name: "Website Development",
-      href: "/services#website",
-      icon: Code,
-      description: "Custom web development solutions",
+      name: "Services",
+      isDropdown: true,
+      dropdownItems: [
+        {
+          name: "Website Development",
+          href: "/services#website",
+          icon: Code,
+          description: "Custom web development solutions",
+        },
+        {
+          name: "Design",
+          href: "/services#design",
+          icon: Palette,
+          description: "Creative design services",
+        },
+        {
+          name: "Paket Bundling",
+          href: "/services#bundling",
+          icon: Package,
+          description: "Complete service packages",
+        },
+      ],
     },
-    {
-      name: "Design",
-      href: "/services#design",
-      icon: Palette,
-      description: "Creative design services",
-    },
-    {
-      name: "Paket Bundling",
-      href: "/services#bundling",
-      icon: Package,
-      description: "Complete service packages",
-    },
+    // { name: "Portfolio", href: "/portfolio" },
+    { name: "FAQ", href: "/faq" },
   ]
 
   const navigationItems = [
-    {
-      name: "Home",
-      href: "/",
-      icon: Home,
-      description: "Back to homepage",
-    },
-    {
-      name: "Services",
-      href: "/services",
-      icon: Code,
-      description: "Our service offerings",
-    },
-    {
-      name: "Portfolio",
-      href: "/portfolio",
-      icon: Briefcase,
-      description: "View our work",
-    },
-    {
-      name: "FAQ",
-      href: "/faq",
-      icon: HelpCircle,
-      description: "Frequently asked questions",
-    },
+    { name: "Home", href: "/", icon: Home, description: "Back to homepage" },
+    { name: "Services", href: "/services", icon: Code, description: "Our service offerings" },
+    { name: "FAQ", href: "/faq", icon: HelpCircle, description: "Frequently asked questions" },
+  ]
+
+  const services = [
+    { name: "Website Development", href: "/services#website", icon: Code, description: "Custom web development solutions" },
+    { name: "Design", href: "/services#design", icon: Palette, description: "Creative design services" },
+    { name: "Paket Bundling", href: "/services#bundling", icon: Package, description: "Complete service packages" },
   ]
 
   return (
     <>
-      <div className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? "px-4 pt-4" : "px-0 pt-0"}`}>
+      <div
+        className={`sticky top-0 z-50 transition-all duration-300 ${
+          isScrolled ? "px-4 pt-4" : "px-0 pt-0"
+        }`}
+      >
         <nav
           className={`transition-all duration-300 ${
             isScrolled
@@ -78,6 +75,7 @@ export default function Navbar() {
         >
           <div className={`mx-auto sm:px-6 px-4 sm:py-3 py-2 ${isScrolled ? "container" : "max-w-none"}`}>
             <div className="flex items-center justify-between">
+              {/* Logo */}
               <div className="flex items-center">
                 <img className="sm:w-10 w-9 sm:me-3" src="/logo-vsal.png" alt="logo vsal studio" />
                 <Link href="/" className="font-sans text-2xl font-bold text-secondary sm:block hidden">
@@ -85,48 +83,46 @@ export default function Navbar() {
                 </Link>
               </div>
 
-              {/* Desktop Navigation */}
+              {/* Desktop Navigation (render dari array) */}
               <div className="hidden md:flex items-center space-x-8">
-                <Link href="/" className="text-foreground hover:text-primary transition-colors">
-                  Home
-                </Link>
+                {desktopNavItems.map((item) =>
+                  item.isDropdown ? (
+                    /* --- Dropdown Services --- */
+                    <div key={item.name} className="relative group">
+                      <button className="flex items-center text-foreground hover:text-primary transition-colors">
+                        {item.name}
+                        <ChevronDown className="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" />
+                      </button>
 
-                <div className="relative group">
-                  <button className="flex items-center text-foreground hover:text-primary transition-colors">
-                    Services
-                    <ChevronDown className="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" />
-                  </button>
-
-                  {/* Dropdown Menu */}
-                  <div className="absolute top-full left-0 mt-2 w-80 bg-background border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                    <div className="p-4">
-                      <div className="grid gap-3">
-                        {services.map((service) => (
-                          <Link
-                            key={service.name}
-                            href={service.href}
-                            className="flex items-start p-3 rounded-lg hover:bg-muted transition-colors group/item"
-                          >
-                            <service.icon className="h-6 w-6 text-primary mt-0.5 mr-3 flex-shrink-0" />
-                            <div>
-                              <h3 className="font-medium text-foreground group-hover/item:text-primary transition-colors">
-                                {service.name}
-                              </h3>
-                              <p className="text-sm text-muted-foreground mt-1">{service.description}</p>
-                            </div>
-                          </Link>
-                        ))}
+                      <div className="absolute top-full left-0 mt-2 w-80 bg-background border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <div className="p-4 grid gap-3">
+                          {item.dropdownItems?.map((sub) => (
+                            <Link
+                              key={sub.name}
+                              href={sub.href}
+                              className="flex items-start p-3 rounded-lg hover:bg-muted transition-colors group/item"
+                            >
+                              <sub.icon className="h-6 w-6 text-primary mt-0.5 mr-3 flex-shrink-0" />
+                              <div>
+                                <h3 className="font-medium text-foreground group-hover/item:text-primary transition-colors">
+                                  {sub.name}
+                                </h3>
+                                <p className="text-sm text-muted-foreground mt-1">{sub.description}</p>
+                              </div>
+                            </Link>
+                          ))}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
+                  ) : (
+                    /* --- Link biasa --- */
+                    <Link key={item.name} href={item.href ?? "/"} className="text-foreground hover:text-primary transition-colors">
+                      {item.name}
+                    </Link>
+                  )
+                )}
 
-                <Link href="/portfolio" className="text-foreground hover:text-primary transition-colors">
-                  Portfolio
-                </Link>
-                <Link href="/faq" className="text-foreground hover:text-primary transition-colors">
-                  FAQ
-                </Link>
+                {/* CTA Button */}
                 <Link href="https://wa.me/6281399090477" target="_blank" rel="noopener noreferrer">
                   <Button className="bg-primary hover:bg-primary/90 text-primary-foreground w-fit">Get Started</Button>
                 </Link>
@@ -145,14 +141,12 @@ export default function Navbar() {
         </nav>
       </div>
 
+      {/* Mobile Full-screen Menu (kode Anda tetap dipakai) */}
       {isMenuOpen && (
         <div className="fixed inset-0 z-50 md:hidden">
-          {/* Background overlay */}
           <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setIsMenuOpen(false)} />
-
-          {/* Full screen menu content */}
           <div className="relative h-full bg-background flex flex-col animate-in slide-in-from-right duration-300">
-            {/* Header with close button */}
+            {/* Header */}
             <div className="flex items-center justify-between p-6 border-b border-border">
               <div className="flex items-center">
                 <img className="w-8 h-8 mr-3" src="/logo-vsal.png" alt="logo vsal studio" />

@@ -39,6 +39,13 @@ const testimonials = [
     img: "/owners/vieco.png",
     desc: "Sebagai brand baru, kami sempat kesulitan memperkenalkan produk ke pasar. Bersama VSAL Studio, brand Vieco tampil lebih menonjol dan dipercaya oleh audiens yang tepat.",
   },
+  {
+    id: 5,
+    name: "Bebew Pii",
+    role: "Owner Terserah Cafe",
+    img: "/owners/bebew.png",
+    desc: "Owner coffee shop seperti saya pasti  bingung untuk menentukan identitas visual yang tepat dan sesuai market kami tuju, untungnya dibantu VSAL Studio untuk brand identity nya",
+  },
 ];
 
 function TestimonialCard({

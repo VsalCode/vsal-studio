@@ -31,12 +31,7 @@ export const AboutUs = () => {
               </div>
             </div>
             <div className="relative">
-              <img src="/digital-agency-team.png" alt="Our team at work" className="rounded-lg shadow-2xl" />
-              <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-6 rounded-lg shadow-lg">
-                <Award className="h-8 w-8 mb-2" />
-                <div className="font-semibold">Award Winning</div>
-                <div className="text-sm opacity-90">Design Agency</div>
-              </div>
+              <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Our team at work" className="rounded-lg shadow-2xl" />
             </div>
           </div>
         </div>

@@ -12,7 +12,7 @@ export const CTA = () => {
             Ready to Transform Your Business?
           </h2>
           <p className="text-secondary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
-            Let s discuss your project and create something amazing together. Get in touch for a free consultation.
+            wujudkan ide Anda jadi kenyataan. Diskusikan proyek Anda bersama kami dan dapatkan konsultasi gratis!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="https://wa.me/6281399090477" target="_blank" rel="noopener noreferrer">

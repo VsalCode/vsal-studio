@@ -89,7 +89,7 @@ export default function Navbar() {
   return (
     <>
       <div
-        className={`fixed mt-7  mx-10 rounded-full top-0 right-0 left-0 z-50 transition-all duration-300 `}
+        className={`fixed sm:mt-7 sm:mx-10 mt-2 rounded-full top-0 right-0 left-0 z-50 transition-all duration-300 `}
       >
         <nav className="bg-white/20 backdrop-blur-md border border-white/30 rounded-full shadow-lg transition-all duration-300 mx-4">
           <div

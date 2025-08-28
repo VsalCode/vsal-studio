@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from "lucide-react";
 import BlurText from "../react-bits/blur-text";
 import Aurora from "../react-bits/aurora-background";
+import ShinyText from "../react-bits/shinny-text";
 
 export const Banner = () => {
   const handleWhatsApp = () => {
@@ -42,7 +43,7 @@ export const Banner = () => {
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10 flex flex-col items-center justify-center">
         <div className="max-w-4xl mx-auto text-center ">
-          <Badge className="mb-6 bg-white/20 text-white border-white/30 backdrop-blur-sm">
+          <Badge className="mb-6 bg-primary/20 text-primary border-primary/30 backdrop-blur-sm">
             Digital Solutions That Work
           </Badge>
           <BlurText
@@ -53,17 +54,20 @@ export const Banner = () => {
             onAnimationComplete={handleAnimationComplete}
             className="block text-center font-sans text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
           />
-
-          <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto leading-relaxed">
-            bantu bisnis kamu tampil lebih standout lewat website yang menarik,
+          <ShinyText
+            text="bantu bisnis kamu tampil lebih standout lewat website yang menarik,
             identitas brand yang kuat, dan konten sosial media yang engage
-            audiens.
-          </p>
+            audiens.!"
+            disabled={false}
+            speed={3}
+            className="text-xl text-white/60 mb-8 max-w-2xl mx-auto leading-relaxed"
+          />
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               onClick={handleWhatsApp}
               size="lg"
-              className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-secondary font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             >
               Start Your Project
               <ArrowRight className="ml-2 h-4 w-4" />

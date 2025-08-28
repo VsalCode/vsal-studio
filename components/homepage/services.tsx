@@ -1,62 +1,67 @@
-import Link from 'next/link'
-import React from 'react'
-import { Button } from '../ui/button'
-import { ArrowRight, Globe, Package, Palette } from 'lucide-react'
-import { Badge } from '../ui/badge'
+"use client";
+
+import Link from "next/link";
+import React from "react";
+import { Button } from "../ui/button";
+import { ArrowRight, Globe, Package, Palette } from "lucide-react";
+import { Badge } from "../ui/badge";
+import { motion } from "framer-motion";
 
 const servicesData = [
   {
-    id: 'bundling',
+    id: "bundling",
     icon: Package,
-    title: 'Paket Bundling',
-    description: 'Solusi lengkap mulai dari Paket Perintis untuk startup hingga Paket Pesugihan untuk enterprise',
+    title: "Paket Bundling",
+    description:
+      "Solusi lengkap mulai dari Paket Perintis untuk startup hingga Paket Pesugihan untuk enterprise",
     features: [
-      'Website + Logo + Social Media',
-      'Paket hemat untuk semua kebutuhan',
-      'Support dan maintenance included'
+      "Website + Logo + Social Media",
+      "Paket hemat untuk semua kebutuhan",
+      "Support dan maintenance included",
     ],
-    buttonText: 'Lihat Paket Bundling',
-    href: '/services#bundling'
+    buttonText: "Lihat Paket Bundling",
+    href: "/services#bundling",
   },
   {
-    id: 'website',
+    id: "website",
     icon: Globe,
-    title: 'Website Development',
-    description: 'Dari landing page sederhana hingga aplikasi web kompleks dengan fitur custom',
+    title: "Website Development",
+    description:
+      "Dari landing page sederhana hingga aplikasi web kompleks dengan fitur custom",
     features: [
-      'Landing Page & Static Website',
-      'E-commerce & POS Web App',
-      'Custom Web Development'
+      "Landing Page & Static Website",
+      "E-commerce & POS Web App",
+      "Custom Web Development",
     ],
-    buttonText: 'Lihat Website Services',
-    href: '/services#website'
+    buttonText: "Lihat Website Services",
+    href: "/services#website",
   },
   {
-    id: 'design',
+    id: "design",
     icon: Palette,
-    title: 'Design Services',
-    description: 'Identitas visual yang kuat mulai dari logo design hingga complete branding',
+    title: "Design Services",
+    description:
+      "Identitas visual yang kuat mulai dari logo design hingga complete branding",
     features: [
-      'Logo Design & Branding',
-      'Social Media Content',
-      'Brand Guidelines & Identity'
+      "Logo Design & Branding",
+      "Social Media Content",
+      "Brand Guidelines & Identity",
     ],
-    buttonText: 'Lihat Design Services',
-    href: '/services#design'
-  }
-]
+    buttonText: "Lihat Design Services",
+    href: "/services#design",
+  },
+];
 
-// warna random untuk icon
-const iconColors = [
-  "text-blue-500",
-  "text-green-500",
-  "text-red-500",
-  "text-yellow-500",
-  "text-purple-500",
-  "text-pink-500",
-  "text-indigo-500",
-  "text-orange-500",
-]
+// Warna random untuk icon background
+const colors = [
+  "bg-red-500",
+  "bg-blue-500",
+  "bg-green-500",
+  "bg-purple-500",
+  "bg-pink-500",
+  "bg-yellow-500",
+  "bg-teal-500",
+];
 
 export const Services = () => {
   return (
@@ -71,25 +76,37 @@ export const Services = () => {
             Complete Digital Solutions
           </h2>
           <p className="text-white/70 text-lg max-w-2xl mx-auto">
-            Dari website development hingga branding lengkap, kami menyediakan semua yang Anda butuhkan untuk sukses digital
+            Dari website development hingga branding lengkap, kami menyediakan
+            semua yang Anda butuhkan untuk sukses digital
           </p>
         </div>
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
-          {servicesData.map((service, idx) => {
-            const IconComponent = service.icon
-            const colorClass = iconColors[idx % iconColors.length] // biar gak bener2 random di setiap render
+          {servicesData.map((service, index) => {
+            const IconComponent = service.icon;
+            const color =
+              colors[Math.floor(Math.random() * colors.length)];
+
             return (
-              <div 
+              <motion.div
                 key={service.id}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 shadow-md border border-white/20 hover:shadow-lg transition-all group"
+                className="rounded-2xl p-8 border border-white/20 bg-white/10 backdrop-blur-xl shadow-lg group"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ scale: 1.05, y: -5 }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.2,
+                  type: "spring",
+                }}
+                viewport={{ once: true }}
               >
-                {/* Icon dengan lingkaran putih */}
-                <div className="mb-6">
-                  <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-200">
-                    <IconComponent className={`h-8 w-8 ${colorClass}`} />
-                  </div>
+                {/* Icon with random bg */}
+                <div
+                  className={`w-14 h-14 flex items-center justify-center rounded-xl text-white mb-6 ${color} shadow-md group-hover:rotate-6 transition-transform`}
+                >
+                  <IconComponent className="h-8 w-8" />
                 </div>
 
                 {/* Title */}
@@ -98,15 +115,13 @@ export const Services = () => {
                 </h3>
 
                 {/* Description */}
-                <p className="text-white/70 mb-6">
-                  {service.description}
-                </p>
+                <p className="text-white/70 mb-6">{service.description}</p>
 
                 {/* Features List */}
-                <ul className="text-sm text-white/80 space-y-2 mb-6">
-                  {service.features.map((feature, index) => (
-                    <li key={index} className="flex items-center">
-                      <span className={`mr-2 ${colorClass}`}>•</span>
+                <ul className="text-sm text-white/60 space-y-2 mb-6">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center">
+                      <span className="text-primary mr-2">•</span>
                       {feature}
                     </li>
                   ))}
@@ -114,29 +129,38 @@ export const Services = () => {
 
                 {/* CTA Button */}
                 <Link href={service.href}>
-                  <Button 
-                    variant="outline" 
-                    className="w-full bg-white/10 border-white/30 text-white hover:bg-primary hover:text-primary-foreground group"
+                  <Button
+                    variant="outline"
+                    className="w-full bg-white/5 border-white/20 text-white hover:bg-primary hover:text-white hover:border-primary transition-all"
                   >
                     {service.buttonText}
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
-              </div>
-            )
+              </motion.div>
+            );
           })}
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center">
+        <motion.div
+          className="text-center"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          viewport={{ once: true }}
+        >
           <Link href="/services">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground group">
+            <Button
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground group shadow-lg"
+            >
               Lihat Semua Services & Pricing
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};

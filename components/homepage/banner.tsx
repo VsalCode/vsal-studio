@@ -1,52 +1,63 @@
-"use client"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { ArrowRight } from "lucide-react"
+"use client";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { ArrowRight } from "lucide-react";
+import BlurText from "../react-bits/blur-text";
+import Aurora from "../react-bits/aurora-background";
 
 export const Banner = () => {
   const handleWhatsApp = () => {
-    const phoneNumber = "6281399090477"
-    const message = "Halo, saya ingin memulai project dengan tim Anda"
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
-    window.open(whatsappUrl, "_blank")
-  }
+    const phoneNumber = "6281399090477";
+    const message = "Halo, saya ingin memulai project dengan tim Anda";
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+    window.open(whatsappUrl, "_blank");
+  };
 
   const handleInstagram = () => {
-    window.open("https://instagram.com/vsal.io", "_blank")
-  }
+    window.open("https://instagram.com/vsal.io", "_blank");
+  };
+
+  const handleAnimationComplete = () => {
+    console.log("Animation completed!");
+  };
 
   return (
-    <section id="home" className="relative py-6 sm:py-20 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-secondary via-accent to-secondary"></div>
-
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-primary/20 to-primary/10 animate-pulse"></div>
-
-      {/* Pattern elements */}
+    <section
+      id="home"
+      className="flex flex-col justify-center items-center relative py-6 sm:py-20 overflow-hidden  h-screen"
+    >
+      {/* Plasma background full cover */}
       <div className="absolute inset-0">
-        {/* Grid pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
-
-        <div className="absolute top-20 left-10 w-20 h-20 bg-primary/10 rounded-full blur-xl animate-bounce"></div>
-        <div className="absolute top-40 right-20 w-32 h-32 bg-primary/15 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute bottom-20 left-1/4 w-16 h-16 bg-primary/10 rounded-full blur-xl animate-bounce delay-1000"></div>
-
-        {/* Diagonal lines pattern */}
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-[linear-gradient(45deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:20px_20px]"></div>
+        import Aurora from './Aurora';
+        <Aurora
+          colorStops={["#17CCA1", "#293E51", "#17CCA1"]}
+          blend={0.5}
+          amplitude={1.0}
+          speed={0.5}
+        />
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <Badge className="mb-6 bg-primary/20 text-primary border-primary/30 backdrop-blur-sm">
+      {/* Content */}
+      <div className="container mx-auto px-4 relative z-10 flex flex-col items-center justify-center">
+        <div className="max-w-4xl mx-auto text-center ">
+          <Badge className="mb-6 bg-white/20 text-white border-white/30 backdrop-blur-sm">
             Digital Solutions That Work
           </Badge>
-          <h1 className="font-sans text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
-            Transform Your
-            <span className="text-transparent bg-gradient-to-r from-primary via-primary/80 to-primary bg-clip-text block">
-              Digital Presence
-            </span>
-          </h1>
+          <BlurText
+            text="Transform Your Digital Presence"
+            delay={150}
+            animateBy="words"
+            direction="top"
+            onAnimationComplete={handleAnimationComplete}
+            className="block text-center font-sans text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
+          />
+
           <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto leading-relaxed">
-            bantu bisnis kamu tampil lebih standout lewat website yang menarik, identitas brand yang kuat, dan konten sosial media yang engage audiens.
+            bantu bisnis kamu tampil lebih standout lewat website yang menarik,
+            identitas brand yang kuat, dan konten sosial media yang engage
+            audiens.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -69,5 +80,5 @@ export const Banner = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};

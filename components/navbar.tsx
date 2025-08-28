@@ -1,20 +1,22 @@
 // src/components/Navbar.tsx
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
-import { useState, useEffect } from "react"
-import { Menu, X, Code, Palette, Package, ChevronDown, Home, HelpCircle } from "lucide-react"
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import {
+  Menu,
+  X,
+  Code,
+  Palette,
+  Package,
+  ChevronDown,
+  Home,
+  HelpCircle,
+} from "lucide-react";
 
 export default function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 50)
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   /* 1. Data Desktop Navigation (dari array) */
   const desktopNavItems = [
@@ -45,40 +47,66 @@ export default function Navbar() {
     },
     // { name: "Portfolio", href: "/portfolio" },
     { name: "FAQ", href: "/faq" },
-  ]
+  ];
 
   const navigationItems = [
     { name: "Home", href: "/", icon: Home, description: "Back to homepage" },
-    { name: "Services", href: "/services", icon: Code, description: "Our service offerings" },
-    { name: "FAQ", href: "/faq", icon: HelpCircle, description: "Frequently asked questions" },
-  ]
+    {
+      name: "Services",
+      href: "/services",
+      icon: Code,
+      description: "Our service offerings",
+    },
+    {
+      name: "FAQ",
+      href: "/faq",
+      icon: HelpCircle,
+      description: "Frequently asked questions",
+    },
+  ];
 
   const services = [
-    { name: "Website Development", href: "/services#website", icon: Code, description: "Custom web development solutions" },
-    { name: "Design", href: "/services#design", icon: Palette, description: "Creative design services" },
-    { name: "Paket Bundling", href: "/services#bundling", icon: Package, description: "Complete service packages" },
-  ]
+    {
+      name: "Website Development",
+      href: "/services#website",
+      icon: Code,
+      description: "Custom web development solutions",
+    },
+    {
+      name: "Design",
+      href: "/services#design",
+      icon: Palette,
+      description: "Creative design services",
+    },
+    {
+      name: "Paket Bundling",
+      href: "/services#bundling",
+      icon: Package,
+      description: "Complete service packages",
+    },
+  ];
 
   return (
     <>
       <div
-        className={`sticky top-0 z-50 transition-all duration-300 ${
-          isScrolled ? "px-4 pt-4" : "px-0 pt-0"
-        }`}
+        className={`fixed mt-7  mx-10 rounded-full top-0 right-0 left-0 z-50 transition-all duration-300 `}
       >
-        <nav
-          className={`transition-all duration-300 ${
-            isScrolled
-              ? "bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border border-border rounded-full shadow-lg"
-              : "bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border shadow-sm"
-          }`}
-        >
-          <div className={`mx-auto sm:px-6 px-4 sm:py-3 py-2 ${isScrolled ? "container" : "max-w-none"}`}>
+        <nav className="bg-white/20 backdrop-blur-md border border-white/30 rounded-full shadow-lg transition-all duration-300 mx-4">
+          <div
+            className={`mx-auto sm:px-6 px-4 sm:py-3 py-2 `}
+          >
             <div className="flex items-center justify-between">
               {/* Logo */}
               <div className="flex items-center">
-                <img className="sm:w-10 w-9 sm:me-3" src="/logo-vsal.png" alt="logo vsal studio" />
-                <Link href="/" className="font-sans text-2xl font-bold text-secondary sm:block hidden">
+                <img
+                  className="sm:w-10 w-9 sm:me-3"
+                  src="/logo-vsal.png"
+                  alt="logo vsal studio"
+                />
+                <Link
+                  href="/"
+                  className="font-sans text-2xl font-bold text-white sm:block hidden"
+                >
                   Vsal Studio
                 </Link>
               </div>
@@ -89,7 +117,7 @@ export default function Navbar() {
                   item.isDropdown ? (
                     /* --- Dropdown Services --- */
                     <div key={item.name} className="relative group">
-                      <button className="flex items-center text-foreground hover:text-primary transition-colors">
+                      <button className="flex items-center text-white hover:text-primary transition-colors">
                         {item.name}
                         <ChevronDown className="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" />
                       </button>
@@ -107,7 +135,9 @@ export default function Navbar() {
                                 <h3 className="font-medium text-foreground group-hover/item:text-primary transition-colors">
                                   {sub.name}
                                 </h3>
-                                <p className="text-sm text-muted-foreground mt-1">{sub.description}</p>
+                                <p className="text-sm text-muted-foreground mt-1">
+                                  {sub.description}
+                                </p>
                               </div>
                             </Link>
                           ))}
@@ -116,15 +146,25 @@ export default function Navbar() {
                     </div>
                   ) : (
                     /* --- Link biasa --- */
-                    <Link key={item.name} href={item.href ?? "/"} className="text-foreground hover:text-primary transition-colors">
+                    <Link
+                      key={item.name}
+                      href={item.href ?? "/"}
+                      className="text-white hover:text-primary transition-colors"
+                    >
                       {item.name}
                     </Link>
                   )
                 )}
 
                 {/* CTA Button */}
-                <Link href="https://wa.me/6281399090477" target="_blank" rel="noopener noreferrer">
-                  <Button className="bg-primary hover:bg-primary/90 text-primary-foreground w-fit">Get Started</Button>
+                <Link
+                  href="https://wa.me/6281399090477"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button className="bg-primary hover:bg-primary/90 text-secondary font-semibold w-fit">
+                    Get Started
+                  </Button>
                 </Link>
               </div>
 
@@ -134,7 +174,11 @@ export default function Navbar() {
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 aria-label="Toggle menu"
               >
-                {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                {isMenuOpen ? (
+                  <X className="h-6 w-6" />
+                ) : (
+                  <Menu className="h-6 w-6" />
+                )}
               </button>
             </div>
           </div>
@@ -144,13 +188,22 @@ export default function Navbar() {
       {/* Mobile Full-screen Menu (kode Anda tetap dipakai) */}
       {isMenuOpen && (
         <div className="fixed inset-0 z-50 md:hidden">
-          <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setIsMenuOpen(false)} />
+          <div
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+            onClick={() => setIsMenuOpen(false)}
+          />
           <div className="relative h-full bg-background flex flex-col animate-in slide-in-from-right duration-300">
             {/* Header */}
             <div className="flex items-center justify-between p-6 border-b border-border">
               <div className="flex items-center">
-                <img className="w-8 h-8 mr-3" src="/logo-vsal.png" alt="logo vsal studio" />
-                <span className="font-sans text-xl font-bold text-secondary">Vsal Studio</span>
+                <img
+                  className="w-8 h-8 mr-3"
+                  src="/logo-vsal.png"
+                  alt="logo vsal studio"
+                />
+                <span className="font-sans text-xl font-bold text-white">
+                  Vsal Studio
+                </span>
               </div>
               <button
                 onClick={() => setIsMenuOpen(false)}
@@ -179,7 +232,9 @@ export default function Navbar() {
                       <h3 className="font-semibold text-lg text-foreground group-hover:text-primary transition-colors">
                         {item.name}
                       </h3>
-                      <p className="text-sm text-muted-foreground">{item.description}</p>
+                      <p className="text-sm text-muted-foreground">
+                        {item.description}
+                      </p>
                     </div>
                   </Link>
                 ))}
@@ -205,7 +260,9 @@ export default function Navbar() {
                         <h3 className="font-medium text-foreground group-hover:text-primary transition-colors">
                           {service.name}
                         </h3>
-                        <p className="text-sm text-muted-foreground">{service.description}</p>
+                        <p className="text-sm text-muted-foreground">
+                          {service.description}
+                        </p>
                       </div>
                     </Link>
                   ))}
@@ -233,5 +290,5 @@ export default function Navbar() {
         </div>
       )}
     </>
-  )
+  );
 }

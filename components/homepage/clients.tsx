@@ -25,11 +25,11 @@ export const Clients = () => {
   ]
 
   return (
-    <section id="clients" className="py-16 bg-muted">
+    <section id="clients" className="py-16 ">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="font-space-grotesk text-3xl font-bold text-secondary mb-4">Trusted by Leading Brands</h2>
-          <p className="text-muted-foreground">
+          <h2 className="font-space-grotesk text-3xl font-bold text-white mb-4">Trusted by Leading Brands</h2>
+          <p className="text-white/70">
             Join hundreds of satisfied clients who ve transformed their digital presence
           </p>
         </div>

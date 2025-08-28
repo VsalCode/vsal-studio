@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export const CTA = () => {
   return (
-    <section className="py-20 bg-secondary">
+    <section className="py-20">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-space-grotesk text-4xl font-bold text-secondary-foreground mb-6">

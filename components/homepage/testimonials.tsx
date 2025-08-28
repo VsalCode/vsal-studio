@@ -1,138 +1,110 @@
-import React from 'react'
-import { Badge } from '../ui/badge'
+"use client";
 
-export const Testimonials = () => {
+import Image from "next/image";
+import Marquee from "../marquee";
+
+const testimonials = [
+  {
+    id: 1,
+    name: "Abdul Rozak",
+    role: "Founder Sekolah Trading Indonesia",
+    img: "/owners/adul.png",
+    desc: "Logo dan branding yang dibuat VSAL Studio benar-benar mengangkat value serta kredibilitas brand kami. Kini lebih mudah bagi kami membangun kepercayaan di komunitas trading.",
+  },
+  {
+    id: 2,
+    name: "Rosyanti Amina",
+    role: "Owner Klinik Armezza Farma",
+    img: "/owners/yanti.png",
+    desc: "Desain yang diberikan membuat klinik kami tampil lebih profesional dan standout dibanding kompetitor. Klien pun jadi lebih percaya dengan layanan yang kami tawarkan.",
+  },
+  {
+    id: 3,
+    name: "Yono",
+    role: "Owner Teh Kampoeng",
+    img: "/owners/teh.png",
+    desc: "VSAL Studio sangat membantu UMKM seperti kami untuk naik kelas. Berkat branding yang rapi, ekspansi bisnis jadi lebih mudah dan diterima oleh pasar baru.",
+  },
+  {
+    id: 4,
+    name: "M. Affandy",
+    role: "CEO Afamec Global Ekspor",
+    img: "/owners/afamec.png",
+    desc: "Website dan brand identity yang dikembangkan memberikan kepercayaan lebih kepada klien mancanegara. Hasilnya, kami semakin siap bersaing di pasar global.",
+  },
+  {
+    id: 5,
+    name: "Meco Randi",
+    role: "Owner Vieco",
+    img: "/owners/vieco.png",
+    desc: "Sebagai brand baru, kami sempat kesulitan memperkenalkan produk ke pasar. Bersama VSAL Studio, brand Vieco tampil lebih menonjol dan dipercaya oleh audiens yang tepat.",
+  },
+];
+
+function TestimonialCard({
+  img,
+  name,
+  role,
+  desc,
+}: {
+  img: string;
+  name: string;
+  role: string;
+  desc: string;
+}) {
   return (
-    <section className="py-20">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <Badge className="mb-6 bg-primary/10 text-primary border-primary/20">Client Testimonials</Badge>
-          <h2 className="font-space-grotesk text-4xl font-bold text-secondary mb-6">What Our Clients Say</h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Dengarkan langsung dari klien yang telah merasakan transformasi digital bersama kami
-          </p>
-        </div>
+   <div className="flex flex-col items-center 
+    bg-white/10 rounded-2xl p-6 w-[280px] sm:w-[320px] 
+    backdrop-blur-md border border-white/10 
+    shadow-lg hover:shadow-xl hover:scale-105
+    transition-all duration-300 ease-in-out group mx-2">
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <div className="bg-background rounded-lg p-8 shadow-sm border border-border">
-            <div className="flex items-center mb-6">
-              <img src="/professional-ceo-woman.png" alt="Sarah Johnson" className="w-15 h-15 rounded-full mr-4" />
-              <div>
-                <h4 className="font-semibold text-secondary">Sarah Johnson</h4>
-                <p className="text-sm text-muted-foreground">CEO, TechStartup Inc.</p>
-              </div>
-            </div>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              Vsal Studio transformed our online presence completely. The Paket Ambisius was perfect for our growing
-              startup. Website yang mereka buat tidak hanya beautiful tapi juga conversion rate kami naik 300%!
-            </p>
-            <div className="flex text-primary">
-              <span>★★★★★</span>
-            </div>
-          </div>
+  {/* Avatar */}
+  <div className="w-20 h-20 mb-4 rounded-full overflow-hidden ring-2 ring-white/20 group-hover:ring-primary transition-all duration-300">
+    <Image
+      src={img}
+      alt={name}
+      width={80}
+      height={80}
+      className="w-full h-full object-cover"
+    />
+  </div>
 
-          <div className="bg-background rounded-lg p-8 shadow-sm border border-border">
-            <div className="flex items-center mb-6">
-              <img
-                src="/professional-marketing-director.png"
-                alt="Michael Chen"
-                className="w-15 h-15 rounded-full mr-4"
-              />
-              <div>
-                <h4 className="font-semibold text-secondary">Michael Chen</h4>
-                <p className="text-sm text-muted-foreground">Marketing Director, GrowthLab</p>
-              </div>
-            </div>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              Tim Vsal Studio sangat profesional dan responsive. Logo design dan branding package yang mereka buat
-              benar-benar mencerminkan nilai perusahaan kami. Highly recommended!
-            </p>
-            <div className="flex text-primary">
-              <span>★★★★★</span>
-            </div>
-          </div>
+  {/* Name */}
+  <p className="text-white font-semibold group-hover:text-primary transition-colors duration-300">
+    {name}
+  </p>
 
-          <div className="bg-background rounded-lg p-8 shadow-sm border border-border">
-            <div className="flex items-center mb-6">
-              <img
-                src="/professional-business-woman-founder.png"
-                alt="Amanda Rodriguez"
-                className="w-15 h-15 rounded-full mr-4"
-              />
-              <div>
-                <h4 className="font-semibold text-secondary">Amanda Rodriguez</h4>
-                <p className="text-sm text-muted-foreground">Founder, EcoFashion Store</p>
-              </div>
-            </div>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              E-commerce website yang dibuat Vsal Studio sangat user-friendly dan sales kami meningkat drastis.
-              Customer support mereka juga excellent, selalu siap membantu kapan saja.
-            </p>
-            <div className="flex text-primary">
-              <span>★★★★★</span>
-            </div>
-          </div>
+  {/* Role */}
+  <p className="text-gray-400 text-sm mb-3 group-hover:text-primary/80 transition-colors duration-300">
+    {role}
+  </p>
 
-          <div className="bg-background rounded-lg p-8 shadow-sm border border-border">
-            <div className="flex items-center mb-6">
-              <img src="/professional-restaurant-owner.png" alt="David Kim" className="w-15 h-15 rounded-full mr-4" />
-              <div>
-                <h4 className="font-semibold text-secondary">David Kim</h4>
-                <p className="text-sm text-muted-foreground">Owner, Kimchi House Restaurant</p>
-              </div>
-            </div>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              POS web app yang mereka develop sangat membantu operasional restaurant kami. Inventory management jadi
-              lebih mudah dan laporan penjualan real-time sangat berguna untuk decision making.
-            </p>
-            <div className="flex text-primary">
-              <span>★★★★★</span>
-            </div>
-          </div>
+  {/* Description */}
+  <p className="text-gray-300 text-sm leading-relaxed text-center group-hover:text-gray-100 transition-colors duration-300">
+    {desc}
+  </p>
+</div>
 
-          <div className="bg-background rounded-lg p-8 shadow-sm border border-border">
-            <div className="flex items-center mb-6">
-              <img
-                src="/professional-creative-director.png"
-                alt="Lisa Thompson"
-                className="w-15 h-15 rounded-full mr-4"
-              />
-              <div>
-                <h4 className="font-semibold text-secondary">Lisa Thompson</h4>
-                <p className="text-sm text-muted-foreground">Creative Director, ArtSpace Gallery</p>
-              </div>
-            </div>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              Social media content management dari Vsal Studio luar biasa! Engagement rate Instagram kami naik 250%
-              dan follower bertambah organik. Content mereka selalu on-brand dan engaging.
-            </p>
-            <div className="flex text-primary">
-              <span>★★★★★</span>
-            </div>
-          </div>
+  );
+}
 
-          <div className="bg-background rounded-lg p-8 shadow-sm border border-border">
-            <div className="flex items-center mb-6">
-              <img
-                src="/professional-tech-entrepreneur.png"
-                alt="James Wilson"
-                className="w-15 h-15 rounded-full mr-4"
-              />
-              <div>
-                <h4 className="font-semibold text-secondary">James Wilson</h4>
-                <p className="text-sm text-muted-foreground">Entrepreneur, InnovateTech</p>
-              </div>
-            </div>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              Paket Pesugihan benar-benar worth it! Custom web application yang mereka buat sesuai banget dengan
-              business flow kami. ROI dari investment ini sudah balik dalam 6 bulan pertama.
-            </p>
-            <div className="flex text-primary">
-              <span>★★★★★</span>
-            </div>
-          </div>
-        </div>
+export default function Testimonials() {
+  return (
+    <section className="py-20  relative overflow-hidden">
+      <div className="text-center mb-12">
+        <h2 className="font-space-grotesk text-3xl font-bold text-white mb-4">
+          What Our Clients Say
+        </h2>
+        {/* <p className="text-gray-400 mt-2">Trusted by businesses everywhere</p> */}
       </div>
+
+      {/* Row 1 → kanan */}
+      <Marquee>
+        {testimonials.map((t) => (
+          <TestimonialCard key={t.id} {...t} />
+        ))}
+      </Marquee>
     </section>
-  )
+  );
 }

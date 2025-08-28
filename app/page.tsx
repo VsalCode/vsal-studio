@@ -1,14 +1,15 @@
-"use client"
+"use client";
 
-import { Banner } from "@/components/homepage/banner"
-import { AboutUs } from "@/components/homepage/about-us"
-import { Clients } from "@/components/homepage/clients"
-import { Services } from "@/components/homepage/services"
+import { Banner } from "@/components/homepage/banner";
+import { AboutUs } from "@/components/homepage/about-us";
+import { Clients } from "@/components/homepage/clients";
+import { Services } from "@/components/homepage/services";
 // import { Testimonials } from "@/components/homepage/testimonials"
-import { CTA } from "@/components/cta"
+import { CTA } from "@/components/cta";
 
-import { motion } from "framer-motion"
-import { fadeInUp, slideLeft, slideRight, zoomIn } from "@/lib/animations"
+import { motion } from "framer-motion";
+import { fadeInUp, slideLeft, slideRight, zoomIn } from "@/lib/animations";
+import Testimonials from "@/components/homepage/testimonials";
 
 export default function HomePage() {
   return (
@@ -21,6 +22,16 @@ export default function HomePage() {
         viewport={{ once: true, amount: 0.2 }}
       >
         <Banner />
+      </motion.section>
+
+      {/* Testi */}
+      <motion.section
+        variants={fadeInUp(0.2)}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <Testimonials />
       </motion.section>
 
       {/* About Us */}
@@ -43,16 +54,6 @@ export default function HomePage() {
         <Clients />
       </motion.section>
 
-      {/* Testimonials (optional) */}
-      {/* <motion.section
-        variants={slideRight(0.2)}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-      >
-        <Testimonials />
-      </motion.section> */}
-
       {/* Services */}
       <motion.section
         variants={fadeInUp(0.2)}
@@ -73,5 +74,5 @@ export default function HomePage() {
         <CTA />
       </motion.section>
     </main>
-  )
+  );
 }

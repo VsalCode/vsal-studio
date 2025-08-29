@@ -100,8 +100,8 @@ export const Design = () => {
     <section id="design" className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-5">
-          <h2 className="font-space-grotesk text-4xl font-bold text-secondary mb-6">Design Services</h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <h2 className="font-space-grotesk text-4xl font-bold text-white mb-6">Design Services</h2>
+          <p className="text-white/70 text-lg max-w-2xl mx-auto">
             Identitas visual yang kuat dan konsisten untuk membangun brand yang memorable
           </p>
         </div>

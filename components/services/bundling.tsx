@@ -172,8 +172,8 @@ export const Bundling = () => {
     <section id="bundling" className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-5">
-          <h2 className="font-space-grotesk text-4xl font-bold text-secondary mb-6">Paket Bundling</h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <h2 className="font-space-grotesk text-4xl font-bold text-white mb-6">Paket Bundling</h2>
+          <p className="text-white/70 text-lg max-w-2xl mx-auto">
             Solusi lengkap untuk transformasi digital bisnis Anda dengan harga yang lebih hemat
           </p>
         </div>

@@ -1,17 +1,25 @@
-import { ArrowLeft } from "lucide-react"
-import Link from "next/link"
-import type React from "react"
-import { Badge } from "./ui/badge"
+"use client";
+
+import { ArrowLeft } from "lucide-react";
+import Link from "next/link";
+import type React from "react";
+import { Badge } from "./ui/badge";
+import BlurText from "./react-bits/blur-text";
+import ShinyText from "./react-bits/shinny-text";
 
 interface HeaderSectionProps {
-  chip: string
-  title1: string
-  title2: string
-  desc: string
-  showBackButton?: boolean
-  backHref?: string
-  backText?: string
+  chip: string;
+  title1: string;
+  title2: string;
+  desc: string;
+  showBackButton?: boolean;
+  backHref?: string;
+  backText?: string;
 }
+
+const handleAnimationComplete = () => {
+  console.log("Animation completed!");
+};
 
 export const HeaderSection: React.FC<HeaderSectionProps> = ({
   chip,
@@ -23,28 +31,8 @@ export const HeaderSection: React.FC<HeaderSectionProps> = ({
   backText = "Back to Home",
 }) => {
   return (
-    <section className="relative py-20 bg-gradient-to-br from-secondary via-accent to-secondary overflow-hidden text-center">
-      {/* Background patterns */}
-      <div className="absolute inset-0">
-        {/* Grid pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(23,204,161,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(23,204,161,0.03)_1px,transparent_1px)] bg-[size:50px_50px]" />
-
-        {/* Floating shapes */}
-        <div className="absolute top-20 left-10 w-32 h-32 bg-primary/5 rounded-full blur-xl animate-pulse" />
-        <div
-          className="absolute top-40 right-20 w-24 h-24 bg-primary/10 rounded-full blur-lg animate-bounce"
-          style={{ animationDelay: "1s" }}
-        />
-        <div
-          className="absolute bottom-20 left-1/4 w-20 h-20 bg-primary/5 rounded-full blur-xl animate-pulse"
-          style={{ animationDelay: "2s" }}
-        />
-
-        {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-accent/20 via-transparent to-secondary/20" />
-      </div>
-
-      <div className="container mx-auto px-4 relative z-10">
+    <section className="relative py-20  text-center h-screen flex flex-col justify-center items-center">
+      <div className="container mx-auto px-4 relative z-10 flex flex-col justify-center items-center">
         <div className="max-w-4xl mx-auto text-center">
           {showBackButton && (
             <>
@@ -59,18 +47,34 @@ export const HeaderSection: React.FC<HeaderSectionProps> = ({
             </>
           )}
 
-          <Badge className="mb-6 bg-primary/10 text-primary border-primary/20">{chip}</Badge>
-
-          <h1 className="font-space-grotesk text-4xl md:text-6xl font-bold text-white mb-6">
-            {title1}
-            <span className="text-primary block bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
-              {title2}
-            </span>
-          </h1>
-
-          <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto leading-relaxed">{desc}</p>
+          <Badge className="mb-6 bg-primary/10 text-primary border-primary/20">
+            {chip}
+          </Badge>
+          <br />
+          <BlurText
+            text={title1}
+            delay={150}
+            animateBy="words"
+            direction="top"
+            onAnimationComplete={handleAnimationComplete}
+            className="block text-center font-sans text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
+          />
+          <BlurText
+            text={title2}
+            delay={150}
+            animateBy="words"
+            direction="top"
+            onAnimationComplete={handleAnimationComplete}
+            className="block text-center font-sans text-4xl md:text-6xl lg:text-7xl font-bold text-primary mb-6 "
+          />
+          <ShinyText
+            text={desc}
+            disabled={false}
+            speed={3}
+            className="text-xl text-white/60 mb-8 max-w-2xl mx-auto leading-relaxed"
+          />
         </div>
       </div>
     </section>
-  )
-}
+  );
+};

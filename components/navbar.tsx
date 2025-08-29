@@ -3,7 +3,7 @@
 
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {
   Menu,
   X,
@@ -92,9 +92,7 @@ export default function Navbar() {
         className={`fixed sm:mt-7 sm:mx-10 mt-2 rounded-full top-0 right-0 left-0 z-50 transition-all duration-300 `}
       >
         <nav className="bg-white/20 backdrop-blur-md border border-white/30 rounded-full shadow-lg transition-all duration-300 mx-4">
-          <div
-            className={`mx-auto sm:px-6 px-4 sm:py-3 py-2 `}
-          >
+          <div className={`mx-auto sm:px-6 px-4 sm:py-3 py-2 `}>
             <div className="flex items-center justify-between">
               {/* Logo */}
               <div className="flex items-center">
@@ -200,6 +198,8 @@ export default function Navbar() {
                   className="w-8 h-8 mr-3"
                   src="/logo-vsal.png"
                   alt="logo vsal studio"
+                  width={10}
+                  height={10}
                 />
                 <span className="font-sans text-xl font-bold text-white">
                   Vsal Studio

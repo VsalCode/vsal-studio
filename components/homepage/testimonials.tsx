@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Marquee from "../marquee";
 
 const testimonials = [
@@ -68,11 +67,9 @@ function TestimonialCard({
 
   {/* Avatar */}
   <div className="w-20 h-20 mb-4 rounded-full overflow-hidden ring-2 ring-white/20 group-hover:ring-primary transition-all duration-300">
-    <Image
+    <img
       src={img}
       alt={name}
-      width={80}
-      height={80}
       className="w-full h-full object-cover"
     />
   </div>

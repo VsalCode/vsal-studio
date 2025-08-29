@@ -8,7 +8,7 @@ import { Services } from "@/components/homepage/services";
 import { CTA } from "@/components/cta";
 
 import { motion } from "framer-motion";
-import { fadeInUp, slideLeft, slideRight, zoomIn } from "@/lib/animations";
+import { fadeInUp, slideLeft, zoomIn } from "@/lib/animations";
 import Testimonials from "@/components/homepage/testimonials";
 
 export default function HomePage() {

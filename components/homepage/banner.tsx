@@ -17,7 +17,7 @@ export const Banner = () => {
   };
 
   const handleInstagram = () => {
-    window.open("https://instagram.com/vsal.io", "_blank");
+    window.open("https://instagram.com/vsal.works", "_blank");
   };
 
   const handleAnimationComplete = () => {
@@ -31,7 +31,6 @@ export const Banner = () => {
     >
       {/* Plasma background full cover */}
       <div className="absolute inset-0">
-        import Aurora from './Aurora';
         <Aurora
           colorStops={["#17CCA1", "#293E51", "#17CCA1"]}
           blend={0.5}

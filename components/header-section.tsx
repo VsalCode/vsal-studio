@@ -59,9 +59,10 @@ export const HeaderSection: React.FC<HeaderSectionProps> = ({
             onAnimationComplete={handleAnimationComplete}
             className="block text-center font-sans text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
           />
+          <br />
           <BlurText
             text={title2}
-            delay={150}
+            delay={250}
             animateBy="words"
             direction="top"
             onAnimationComplete={handleAnimationComplete}

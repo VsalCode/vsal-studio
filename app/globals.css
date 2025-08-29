@@ -7,6 +7,9 @@ body {
   margin: 0;
 }
 
+button {
+  @apply cursor-pointer
+}
 
 :root {
   --background: oklch(1 0 0);

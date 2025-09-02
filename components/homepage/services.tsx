@@ -3,54 +3,10 @@
 import Link from "next/link";
 import React from "react";
 import { Button } from "../ui/button";
-import { ArrowRight, Globe, Package, Palette } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Badge } from "../ui/badge";
 import { motion } from "framer-motion";
-
-const servicesData = [
-  {
-    id: "bundling",
-    icon: Package,
-    title: "Paket Bundling",
-    description:
-      "Solusi lengkap mulai dari Paket Perintis untuk startup hingga Paket Pesugihan untuk enterprise",
-    features: [
-      "Website + Logo + Social Media",
-      "Paket hemat untuk semua kebutuhan",
-      "Support dan maintenance included",
-    ],
-    buttonText: "Lihat Paket Bundling",
-    href: "/services#bundling",
-  },
-  {
-    id: "website",
-    icon: Globe,
-    title: "Website Development",
-    description:
-      "Dari landing page sederhana hingga aplikasi web kompleks dengan fitur custom",
-    features: [
-      "Landing Page & Static Website",
-      "E-commerce & POS Web App",
-      "Custom Web Development",
-    ],
-    buttonText: "Lihat Website Services",
-    href: "/services#website",
-  },
-  {
-    id: "design",
-    icon: Palette,
-    title: "Design Services",
-    description:
-      "Identitas visual yang kuat mulai dari logo design hingga complete branding",
-    features: [
-      "Logo Design & Branding",
-      "Social Media Content",
-      "Brand Guidelines & Identity",
-    ],
-    buttonText: "Lihat Design Services",
-    href: "/services#design",
-  },
-];
+import { servicesData } from "@/data/services";
 
 // Warna random untuk icon background
 const colors = [
@@ -83,7 +39,7 @@ export const Services = () => {
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
-          {servicesData.map((service, index) => {
+          {servicesData?.map((service, index) => {
             const IconComponent = service.icon;
             const color =
               colors[Math.floor(Math.random() * colors.length)];

@@ -23,12 +23,12 @@ export const Categories = () => {
                     <AccordionItem
                       key={faqIndex}
                       value={`${categoryIndex}-${faqIndex}`}
-                      className="bg-background/90 border border-primary rounded-lg px-6"
+                      className="border border-primary rounded-lg px-6 bg-secondary/60 backdrop-blur-xl shadow-lg"
                     >
                       <AccordionTrigger className="text-left hover:text-primary transition-colors py-6">
-                        <span className="font-medium text-secondary pr-4">{faq.question}</span>
+                        <span className="font-medium text-white pr-4">{faq.question}</span>
                       </AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+                      <AccordionContent className="text-white/80 leading-relaxed pb-6">
                         {faq.answer}
                       </AccordionContent>
                     </AccordionItem>

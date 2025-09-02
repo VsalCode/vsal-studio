@@ -57,7 +57,7 @@ export default function Testimonials() {
         <h2 className="font-space-grotesk text-3xl font-bold text-white mb-4">
           What Our Clients Say
         </h2>
-        {/* <p className="text-gray-400 mt-2">Trusted by businesses everywhere</p> */}
+        <p className="text-gray-400 mt-2">Apa kata mereka setelah mengembangkan digitalisasi bisnis mereka bersama vsal studio</p>
       </div>
 
       {/* Row 1 → kanan */}

@@ -10,7 +10,7 @@ export const Clients = () => {
         <div className="text-center mb-12">
           <h2 className="font-space-grotesk text-3xl font-bold text-white mb-4">Trusted by Leading Brands</h2>
           <p className="text-white/70">
-            Join hundreds of satisfied clients who ve transformed their digital presence
+            Bergabung menjadi salah satu bagian dari mereka yang dibantu oleh vsal studio untuk mengembangkan digitalisasi bisnis mereka
           </p>
         </div>
         <Marquee pauseOnHover className="[--duration:30s]">

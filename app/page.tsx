@@ -10,6 +10,7 @@ import { CTA } from "@/components/cta";
 import { motion } from "framer-motion";
 import { fadeInUp, slideLeft, zoomIn } from "@/lib/animations";
 import Testimonials from "@/components/homepage/testimonials";
+import { WhyUs } from "@/components/homepage/why-us";
 
 export default function HomePage() {
   return (
@@ -43,6 +44,16 @@ export default function HomePage() {
           viewport={{ once: true, amount: 0.2 }}
         >
           <AboutUs />
+        </motion.section>
+
+        {/* why us */}
+        <motion.section
+          variants={slideLeft(0.2)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          <WhyUs/>
         </motion.section>
 
         {/* Testi */}

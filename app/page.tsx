@@ -10,8 +10,6 @@ import { CTA } from "@/components/cta";
 import { motion } from "framer-motion";
 import { fadeInUp, slideLeft, zoomIn } from "@/lib/animations";
 import Testimonials from "@/components/homepage/testimonials";
-import WhatsAppButton from "@/components/wa-button";
-import ScrollToTopButton from "@/components/scroll-top-button";
 
 export default function HomePage() {
   return (
@@ -77,8 +75,6 @@ export default function HomePage() {
           <CTA />
         </motion.section>
       </main>
-       <ScrollToTopButton/>
-      <WhatsAppButton />
     </>
   );
 }

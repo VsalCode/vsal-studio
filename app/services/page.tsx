@@ -3,8 +3,6 @@ import { Website } from "@/components/services/website";
 import { Design } from "@/components/services/design";
 import { CTA } from "@/components/cta";
 import { HeaderSection } from "@/components/header-section";
-import ScrollToTopButton from "@/components/scroll-top-button";
-import WhatsAppButton from "@/components/wa-button";
 
 export default function ServicesPage() {
   return (
@@ -42,8 +40,7 @@ export default function ServicesPage() {
         <Design />
         <CTA />
       </main>
-      <ScrollToTopButton />
-      <WhatsAppButton />
+      
     </>
   );
 }

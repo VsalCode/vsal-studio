@@ -1,8 +1,6 @@
 import { HeaderSection } from "@/components/header-section";
 import { Categories } from "@/components/faq/categories";
 import { Contact } from "@/components/faq/contact";
-import ScrollToTopButton from "@/components/scroll-top-button";
-import WhatsAppButton from "@/components/wa-button";
 
 export default function FAQPage() {
   return (
@@ -37,8 +35,6 @@ export default function FAQPage() {
         <Categories />
         <Contact />
       </main>
-      <ScrollToTopButton />
-      <WhatsAppButton />
     </>
   );
 }

@@ -25,14 +25,14 @@ export default function HomePage() {
           <Banner />
         </motion.section>
 
-        {/* Testi */}
+        {/* Clients */}
         <motion.section
-          variants={fadeInUp(0.2)}
+          variants={zoomIn(0.3)}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          <Testimonials />
+          <Clients />
         </motion.section>
 
         {/* About Us */}
@@ -45,14 +45,14 @@ export default function HomePage() {
           <AboutUs />
         </motion.section>
 
-        {/* Clients */}
+        {/* Testi */}
         <motion.section
-          variants={zoomIn(0.3)}
+          variants={fadeInUp(0.2)}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          <Clients />
+          <Testimonials />
         </motion.section>
 
         {/* Services */}

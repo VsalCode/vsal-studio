@@ -4,222 +4,202 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useState } from "react";
-import {
-  ChevronDown,
-  Menu,
-  X
-} from "lucide-react";
-import { desktopNavItems, navigationItems, services } from "@/data/navbar";
+import { ChevronDown, Menu, X } from "lucide-react";
+import { desktopNavItems } from "@/data/navbar";
+import { MdArrowOutward } from "react-icons/md";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  /* 1. Data Desktop Navigation (dari array) */
-
-
   return (
     <>
       <div
-        className={`fixed sm:mt-3 sm:mx-10 mt-2 rounded-full top-0 right-0 left-0 z-50 transition-all duration-300 `}
+        className={`
+    fixed top-0 right-0 left-0 mx-4 
+    md:mx-6 lg:mx-0
+    lg:left-1/2 lg:-translate-x-1/2 
+    lg:mt-4 mt-2 
+    z-50 transition-all duration-300 
+    bg-black/70 backdrop-blur-md 
+    rounded-full shadow-lg border border-primary/30 
+    py-[5px] px-[4px]
+  `}
       >
-        <nav className="bg-white/20 backdrop-blur-md border border-white/30 rounded-full shadow-lg transition-all duration-300 mx-4">
-          <div className={`mx-auto px-4 py-2`}>
-            <div className="flex items-center justify-between">
-              {/* Logo */}
-              <div className="flex items-center">
-                <img
-                  className="sm:w-9 w-9 sm:me-3"
-                  src="/logo-vsal.png"
-                  alt="logo vsal studio"
-                />
-                <Link
-                  href="/"
-                  className="font-sans text-xl font-bold text-white sm:block hidden"
-                >
-                  Vsal Studio
-                </Link>
-              </div>
+        <nav className="flex items-center justify-between w-full">
+          {/* Logo */}
+          <div className="flex items-center bg-primary/80 rounded-full p-1 ms-[2px] sm:ms-0">
+            <img className="w-7" src="/logo-vsal.png" alt="logo vsal studio" />
+          </div>
 
-              {/* Desktop Navigation (render dari array) */}
-              <div className="hidden md:flex items-center space-x-8">
-                {desktopNavItems.map((item) =>
-                  item.isDropdown ? (
-                    /* --- Dropdown Services --- */
-                    <div key={item.name} className="relative group">
-                      <button className="flex items-center text-white hover:text-primary transition-colors">
-                        {item.name}
-                        <ChevronDown className="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" />
-                      </button>
+          {/* Tablet & Desktop Navigation */}
+          <div className="hidden md:flex items-center justify-between space-x-5 lg:space-x-8 text-sm lg:text-base">
+            {desktopNavItems.map((item) =>
+              item.isDropdown ? (
+                <div key={item.name} className="relative group">
+                  <button className="flex items-center text-white hover:text-primary transition-colors">
+                    {item.name}
+                    <ChevronDown className="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" />
+                  </button>
 
-                      <div className="absolute top-full left-0 mt-2 w-80 bg-background border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                        <div className="p-4 grid gap-3">
-                          {item.dropdownItems?.map((sub) => (
-                            <Link
-                              key={sub.name}
-                              href={sub.href}
-                              className="flex items-start p-3 rounded-lg hover:bg-muted transition-colors group/item"
-                            >
-                              <sub.icon className="h-6 w-6 text-primary mt-0.5 mr-3 flex-shrink-0" />
-                              <div>
-                                <h3 className="font-medium text-foreground group-hover/item:text-primary transition-colors">
-                                  {sub.name}
-                                </h3>
-                                <p className="text-sm text-muted-foreground mt-1">
-                                  {sub.description}
-                                </p>
-                              </div>
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
+                  {/* Dropdown */}
+                  <div className="absolute bg-black top-full mt-4 w-72 lg:w-80 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-primary/30">
+                    <div className="p-4 grid gap-3">
+                      {item.dropdownItems?.map((sub) => (
+                        <Link
+                          key={sub.name}
+                          href={sub.href}
+                          className="flex items-start gap-4 p-3 rounded-lg hover:bg-gray-dark transition-colors group/item"
+                        >
+                          <div className={sub.class}>
+                            <sub.icon className="h-6 w-6 text-white flex-shrink-0" />
+                          </div>
+                          <div>
+                            <h3 className="font-medium text-white group-hover/item:text-primary transition-colors">
+                              {sub.name}
+                            </h3>
+                            <p className="text-sm text-white/75 mt-1">
+                              {sub.description}
+                            </p>
+                          </div>
+                        </Link>
+                      ))}
                     </div>
-                  ) : (
-                    /* --- Link biasa --- */
-                    <Link
-                      key={item.name}
-                      href={item.href ?? "/"}
-                      className="text-white hover:text-primary transition-colors"
-                    >
-                      {item.name}
-                    </Link>
-                  )
-                )}
-
-                {/* CTA Button */}
+                  </div>
+                </div>
+              ) : (
                 <Link
-                  href="https://wa.me/6281399090477"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  key={item.name}
+                  href={item.href ?? "/"}
+                  className="text-white hover:text-primary transition-colors"
                 >
-                  <Button className="bg-primary hover:bg-primary/90 text-secondary w-fit rounded-full font-bold">
-                    Get Started
-                  </Button>
+                  {item.name}
                 </Link>
-              </div>
+              )
+            )}
+          </div>
 
-              {/* Mobile Menu Button */}
-              <button
-                className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                aria-label="Toggle menu"
-              >
-                {isMenuOpen ? (
-                  <X className="h-6 w-6" />
-                ) : (
-                  <Menu className="h-6 w-6" />
-                )}
-              </button>
-            </div>
+          {/* CTA button */}
+          <div className="hidden md:block">
+            <Link
+              href="https://wa.me/6281399090477"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="bg-primary hover:bg-primary/80 text-secondary w-fit rounded-full font-bold text-sm lg:text-base px-3 lg:px-5">
+                Kontak
+                <MdArrowOutward className="font-bold" />
+              </Button>
+            </Link>
+          </div>
+
+          {/* Mobile Hamburger */}
+          <div className="md:hidden flex items-center me-2">
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              {isMenuOpen ? (
+                <X className="text-white w-6 h-6" />
+              ) : (
+                <Menu className="text-white w-7 h-7" />
+              )}
+            </button>
           </div>
         </nav>
       </div>
 
-      {/* Mobile Full-screen Menu (kode Anda tetap dipakai) */}
-      {isMenuOpen && (
-        <div className="fixed inset-0 z-50 md:hidden">
-          <div
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-            onClick={() => setIsMenuOpen(false)}
-          />
-          <div className="relative h-full bg-background flex flex-col animate-in slide-in-from-right duration-300">
-            {/* Header */}
-            <div className="flex items-center justify-between p-6 border-b border-border">
-              <div className="flex items-center">
-                <img
-                  className="w-8 h-8 mr-3"
-                  src="/logo-vsal.png"
-                  alt="logo vsal studio"
-                  width={10}
-                  height={10}
-                />
-                <span className="font-sans text-xl font-bold text-white">
-                  Vsal Studio
-                </span>
-              </div>
-              <button
-                onClick={() => setIsMenuOpen(false)}
-                className="p-2 rounded-lg hover:bg-muted transition-colors"
-                aria-label="Close menu"
-              >
-                <X className="h-6 w-6" />
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -30 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="fixed inset-0 bg-black/95 backdrop-blur-md z-40 p-6 md:hidden flex flex-col"
+          >
+            {/* Header inside mobile menu */}
+            <div className="flex items-center justify-between mb-8">
+              <img src="/logo-vsal.png" alt="logo vsal" className="w-8" />
+              <button onClick={() => setIsMenuOpen(false)}>
+                <X className="w-7 h-7 text-white" />
               </button>
             </div>
 
-            {/* Menu content */}
-            <div className="flex-1 overflow-y-auto p-6">
-              {/* Main Navigation */}
-              <div className="space-y-2 mb-8">
-                {navigationItems.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="flex items-center p-4 rounded-xl hover:bg-muted transition-all duration-200 group"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 mr-4 group-hover:bg-primary/20 transition-colors">
-                      <item.icon className="h-6 w-6 text-primary" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="font-semibold text-lg text-foreground group-hover:text-primary transition-colors">
-                        {item.name}
-                      </h3>
-                      <p className="text-sm text-muted-foreground">
-                        {item.description}
-                      </p>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-
-              {/* Services Section */}
-              <div className="mb-8">
-                <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4 px-2">
-                  Our Services
-                </h4>
-                <div className="space-y-2">
-                  {services.map((service) => (
-                    <Link
-                      key={service.name}
-                      href={service.href}
-                      className="flex items-center p-4 rounded-xl hover:bg-muted transition-all duration-200 group"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 mr-4 group-hover:bg-primary/20 transition-colors">
-                        <service.icon className="h-5 w-5 text-primary" />
+            {/* Nav Items */}
+            <div className="flex-1 overflow-y-auto flex flex-col gap-4">
+              {desktopNavItems.map((item) =>
+                item.isDropdown ? (
+                  <details key={item.name} className="group">
+                    <summary className="flex items-center gap-4 cursor-pointer py-3 px-4 rounded-xl bg-gray-800/50 hover:bg-primary/20 transition-all">
+                      <div className="bg-gray-dark border border-white p-2 rounded-xl flex justify-center items-start">
+                        <item.icon className="w-6 h-6 text-primary" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="font-medium text-foreground group-hover:text-primary transition-colors">
-                          {service.name}
-                        </h3>
-                        <p className="text-sm text-muted-foreground">
-                          {service.description}
-                        </p>
+                        <h2 className="text-white font-medium">{item.name}</h2>
+                        <p className="text-sm text-white/70">{item.desc}</p>
                       </div>
-                    </Link>
-                  ))}
-                </div>
-              </div>
+                      <ChevronDown className="text-white group-open:rotate-180 transition-transform" />
+                    </summary>
+
+                    {/* Dropdown Items */}
+                    <div className="mt-3 flex flex-col gap-3 bg-gray-800/40 p-4 rounded-xl">
+                      {item.dropdownItems?.map((sub) => (
+                        <Link
+                          key={sub.name}
+                          href={sub.href}
+                          onClick={() => setIsMenuOpen(false)}
+                          className="flex items-center gap-4 p-3 rounded-xl hover:bg-primary/10 transition-all"
+                        >
+                          <div className={sub.class}>
+                            <sub.icon className="w-6 h-6 text-white" />
+                          </div>
+                          <div className="flex flex-col gap-1">
+                            <h3 className="text-white">{sub.name}</h3>
+                            <p className="text-sm text-white/70">
+                              {sub.description}
+                            </p>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </details>
+                ) : (
+                  <Link
+                    key={item.name}
+                    href={item.href ?? "/"}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="flex items-center gap-4 p-3 rounded-xl bg-gray-800/50 hover:bg-primary/20 transition-all"
+                  >
+                    <div className="bg-gray-dark border border-white p-2 rounded-xl flex justify-center items-center">
+                      {item.icon && (
+                        <item.icon className="w-6 h-6 text-primary" />
+                      )}
+                    </div>
+                    <div>
+                      <h2 className="text-white font-medium">{item.name}</h2>
+                      <p className="text-sm text-white/70">{item.desc}</p>
+                    </div>
+                  </Link>
+                )
+              )}
             </div>
 
-            {/* Bottom CTA */}
-            <div className="p-6 border-t border-border">
+            {/* CTA Button at bottom */}
+            <div className="mt-6">
               <Link
                 href="https://wa.me/6281399090477"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsMenuOpen(false)}
               >
-                <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground h-14 rounded-xl font-semibold text-lg">
-                  <div className="flex items-center justify-center">
-                    <span>Get Started</span>
-                    <span className="ml-2 text-lg">→</span>
-                  </div>
+                <Button className="bg-primary hover:bg-primary/80 text-secondary w-full rounded-full font-bold py-6 text-lg flex items-center justify-center gap-2 shadow-md">
+                  Kontak
+                  <MdArrowOutward className="w-5 h-5 font-bold" />
                 </Button>
               </Link>
             </div>
-          </div>
-        </div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }

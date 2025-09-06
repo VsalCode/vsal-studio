@@ -34,28 +34,28 @@ export const desktopNavItems = [
     dropdownItems: [
       {
         name: "Website",
-        href: "/layanan#website",
+        href: "/services#website",
         icon: FaCode,
         description: "Solusi pengembangan website, mulai dari landing page, POS sampai e-commerce",
         class: "bg-gradient-to-br from-[#1A2A80] to-[#273F4F] text-primary flex justify-center items-center rounded-lg p-2"
       },
       {
         name: "Desain ",
-        href: "/layanan#desain",
+        href: "/services#design",
         icon: MdDesignServices,
         description: "Layanan desain kreatif mulai dari branding, logo, dan lain² ",
         class: "bg-gradient-to-br from-[#090040] to-[#640D5F] text-primary flex justify-center items-center rounded-lg p-2"
       },
       {
         name: "Media Sosial",
-        href: "/layanan#medsos",
+        href: "/services#design",
         icon: TiSocialInstagram,
         description: "Pengelolaan dan konten media sosial",
         class: "bg-gradient-to-br from-[#640D5F] to-[#C59560] text-primary flex justify-center items-center rounded-lg p-2"
       },
       {
         name: "Paket Bundling",
-        href: "/layanan#bundling",
+        href: "/services#bundling",
         icon: LuPackageOpen,
         description: "Dapatkan semua layanan lengkap dengan lebih hemat",
         class: "bg-gradient-to-br from-[#98CD00] to-[#064232] text-primary flex justify-center items-center rounded-lg p-2"

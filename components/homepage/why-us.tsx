@@ -1,86 +1,91 @@
 import React from "react";
-import FlowingMenu from "../react-bits/flowing-menu";
-import { Award, DollarSign, Users, Briefcase } from "lucide-react";
-import SpotlightCard from "../react-bits/SpotlightCard";
+import { motion } from "framer-motion";
+import { demoItems } from "@/data/whyUs-data";
 
 export const WhyUs = () => {
-  const demoItems = [
-    {
-      link: "#",
-      text: "3+ Tahun Pengalaman",
-      image:
-        "https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg",
-      icon: <Award className="w-6 h-6 text-primary" />,
-    },
-    {
-      link: "#",
-      text: "Harga yang Kompetitif",
-      image:
-        "https://images.pexels.com/photos/8463694/pexels-photo-8463694.jpeg",
-      icon: <DollarSign className="w-6 h-6 text-primary" />,
-    },
-    {
-      link: "#",
-      text: "Dipercaya lebih dari 100+ Klien",
-      image:
-        "https://images.pexels.com/photos/4963437/pexels-photo-4963437.jpeg",
-      icon: <Users className="w-6 h-6 text-primary" />,
-    },
-    {
-      link: "#",
-      text: "Layanan Profesional",
-      image:
-        "https://images.pexels.com/photos/4348401/pexels-photo-4348401.jpeg",
-      icon: <Briefcase className="w-6 h-6 text-primary" />,
-    },
-  ];
 
   return (
-    <section className="my-17 px-4 sm:px-0">
-      <div>
-        {/* Heading */}
-        <div className="text-center mb-12">
-          <h2 className="font-space-grotesk text-3xl font-bold text-white mb-4">
-            Why Us?
-          </h2>
-          <p className="text-gray-400 mt-2 max-w-2xl mx-auto">
-            Apa alasan anda harus memilih VSAL Studio untuk mengembangkan
-            digitalisasi bisnis anda?
-          </p>
-        </div>
+    <section className="my-20 px-4 sm:px-0">
+      <div className="text-center mb-16">
+        <h2 className="font-space-grotesk text-3xl font-bold text-white mb-4">
+          Why Us?
+        </h2>
+        <p className="text-gray-400 mt-2 max-w-2xl mx-auto">
+          Apa alasan anda harus memilih VSAL Studio untuk mengembangkan
+          digitalisasi bisnis anda?
+        </p>
+      </div>
 
-        {/* Mobile View - Spotlight Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 px-4 md:hidden">
-          {demoItems.map((item, idx) => (
-            <SpotlightCard
-              key={idx}
-              className="custom-spotlight-card p-6 rounded-2xl bg-[#111]/70 
-                 border border-white/10 shadow-lg transition 
-                 hover:scale-105 hover:shadow-xl"
-              spotlightColor="rgba(0, 229, 255, 0.2)"
-            >
-              <div className="flex flex-col items-center text-center gap-3">
-                {/* Icon */}
-                <div
-                  className="flex items-center justify-center w-14 h-14 
-                        rounded-full bg-primary/10 mb-5"
-                >
-                  {item.icon}
+      <div className="relative max-w-6xl mx-auto">
+        {/* Vertical line */}
+        <div className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-gray-700" />
+
+        {demoItems.map((item, idx) => (
+          <motion.div
+            key={idx}
+            initial={{ opacity: 0, x: idx % 2 === 0 ? -100 : 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-24 relative"
+          >
+            {/* Left column */}
+            {idx % 2 === 0 ? (
+              <>
+                <div className="flex justify-end">
+                  <div className="max-w-md bg-[#111]/70 border border-white/10 rounded-2xl shadow-lg p-6">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10">
+                        {item.icon}
+                      </div>
+                      <h3 className="text-white font-semibold text-xl">
+                        {item.title}
+                      </h3>
+                    </div>
+                    <p className="text-gray-400 text-sm leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
                 </div>
-                {/* Text */}
-                <p className="text-white font-semibold text-lg">{item.text}</p>
-              </div>
-            </SpotlightCard>
-          ))}
-        </div>
+                <div>
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-60 object-cover rounded-2xl shadow-lg"
+                  />
+                </div>
+              </>
+            ) : (
+              <>
+                <div>
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-60 object-cover rounded-2xl shadow-lg"
+                  />
+                </div>
+                <div className="flex justify-start">
+                  <div className="max-w-md bg-[#111]/70 border border-white/10 rounded-2xl shadow-lg p-6">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10">
+                        {item.icon}
+                      </div>
+                      <h3 className="text-white font-semibold text-xl">
+                        {item.title}
+                      </h3>
+                    </div>
+                    <p className="text-gray-400 text-sm leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+              </>
+            )}
 
-        {/* Desktop View - Flowing Menu */}
-        <div
-          className="hidden md:block"
-          style={{ height: "600px", position: "relative" }}
-        >
-          <FlowingMenu items={demoItems} />
-        </div>
+            {/* Timeline node */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-primary border-4 border-[#111]" />
+          </motion.div>
+        ))}
       </div>
     </section>
   );

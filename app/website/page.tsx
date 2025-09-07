@@ -13,7 +13,7 @@ const WebsitePage = () => {
         heading="Bangun Website Profesional untuk Bisnis Anda"
         description="Kami membantu bisnis Anda tampil lebih menonjol dengan website modern, identitas brand yang kuat, serta strategi digital yang membuat audiens lebih engage."
         buttonText="Mulai Proyek Anda"
-        imageURL="https://mytasker.com/assets/images/WD-D-banner.jpg"
+        imageURL="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg"
       />
       <PricePlan
         id="website"

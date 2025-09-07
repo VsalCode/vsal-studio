@@ -3,7 +3,6 @@ import { BannerService } from "@/components/services/banner";
 import { PricePlan } from "@/components/services/price-plan";
 import { WhyUs } from "@/components/services/why-us";
 import { bundlingServices, whyUsBundling } from "@/data/services/bundling";
-import { designServices, whyUsDesign } from "@/data/services/design";
 import React from "react";
 
 const BundlingPage = () => {

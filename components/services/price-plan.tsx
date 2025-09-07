@@ -18,7 +18,6 @@ export interface ServiceItem {
   discount?: number
   features: Feature[]
   popular?: boolean
-  [key: string]: any
 }
 
 interface PricePlanProps {

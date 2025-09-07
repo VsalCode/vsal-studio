@@ -76,7 +76,7 @@ export const PricePlan: React.FC<PricePlanProps> = ({
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="font-space-grotesk text-4xl font-bold text-primary mb-6">
-            Paket Harga
+            {title}
           </h2>
           <p className="text-white/70 text-lg max-w-2xl mx-auto mb-4">{subtitle}</p>
           <p className="text-white/50 text-sm max-w-xl mx-auto">
@@ -113,11 +113,21 @@ export const PricePlan: React.FC<PricePlanProps> = ({
         {/* Carousel */}
         <div className="relative max-w-7xl mx-auto px-4">
           <div className="overflow-hidden pt-6 pb-8" ref={emblaRef}>
-            <div className="flex gap-6 px-2">
+            <div className={`flex gap-6 px-2 ${
+              services && services.length <= 3 ? 'justify-center' : ''
+            }`}>
               {services?.map((service, index) => (
                 <div
                   key={index}
-                  className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_calc(50%-12px)] lg:flex-[0_0_calc(33.333%-16px)] xl:flex-[0_0_calc(25%-18px)]"
+                  className={`min-w-0 ${
+                    services.length === 1 
+                      ? 'flex-[0_0_100%] max-w-md mx-auto'
+                      : services.length === 2
+                      ? 'flex-[0_0_100%] sm:flex-[0_0_calc(50%-12px)] max-w-md'
+                      : services.length === 3
+                      ? 'flex-[0_0_100%] sm:flex-[0_0_calc(50%-12px)] lg:flex-[0_0_calc(33.333%-16px)] max-w-md'
+                      : 'flex-[0_0_100%] sm:flex-[0_0_calc(50%-12px)] lg:flex-[0_0_calc(33.333%-16px)] xl:flex-[0_0_calc(25%-18px)]'
+                  }`}
                 >
                   <ServiceCard {...service} />
                 </div>

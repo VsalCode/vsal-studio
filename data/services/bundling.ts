@@ -3,6 +3,8 @@ export const bundlingServices = [
       title: "Paket Perintis",
       description: "Pilihan tepat untuk startup dan bisnis yang baru mulai merintis.",
       price: "Rp 1,5 JT",
+      originalPrice: "Rp 2,1 JT",
+      discount: 29,
       features: [
         {
           title: "Free Konsultasi",
@@ -34,6 +36,8 @@ export const bundlingServices = [
       title: "Paket Ambisius",
       description: "Solusi lengkap untuk bisnis yang sedang bertumbuh pesat.",
       price: "Rp 2,9 JT",
+      originalPrice: "Rp 4,5 JT",
+      discount: 36,
       popular: true,
       features: [
         {
@@ -86,6 +90,8 @@ export const bundlingServices = [
       title: "Paket Pesugihan",
       description: "Transformasi digital menyeluruh untuk perusahaan dan brand besar.",
       price: "Rp 5 JT",
+      originalPrice: "Rp 8,2 JT",
+      discount: 39,
       features: [
         {
           title: "Free Konsultasi",
@@ -142,3 +148,54 @@ export const bundlingServices = [
       ]
     }
   ]
+
+  export const whyUsBundling = [
+  {
+    icon: "briefcase",
+    title: "Solusi Terintegrasi",
+    description:
+      "Satu paket lengkap untuk semua kebutuhan digital bisnis Anda - website, branding, hingga marketing.",
+  },
+  {
+    icon: "dollarSign",
+    title: "Hemat hingga 40%",
+    description:
+      "Lebih murah dibanding membeli layanan terpisah, dengan kualitas yang sama atau bahkan lebih baik.",
+  },
+  {
+    icon: "clock",
+    title: "Proses Lebih Cepat",
+    description:
+      "Satu tim menangani semua layanan, komunikasi lebih efisien dan timeline pengerjaan lebih cepat.",
+  },
+  {
+    icon: "users",
+    title: "Satu Tim, Satu Visi",
+    description:
+      "Tim yang sama menangani semua aspek, memastikan konsistensi brand dan visi bisnis Anda.",
+  },
+  {
+    icon: "layers",
+    title: "Strategi Holistik",
+    description:
+      "Pendekatan menyeluruh yang mempertimbangkan semua aspek digital untuk hasil yang optimal.",
+  },
+  {
+    icon: "globe",
+    title: "Support Terpusat",
+    description:
+      "Satu point of contact untuk semua layanan, memudahkan komunikasi dan maintenance.",
+  },
+  {
+    icon: "zap",
+    title: "Growth-Oriented",
+    description:
+      "Paket dirancang untuk mendukung pertumbuhan bisnis Anda dari skala kecil hingga enterprise.",
+  },
+  {
+    icon: "shield",
+    title: "Garansi Kepuasan",
+    description: 
+      "Jaminan kualitas dan kepuasan dengan revisi unlimited hingga Anda puas 100%.",
+  },
+];

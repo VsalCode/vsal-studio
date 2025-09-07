@@ -51,83 +51,107 @@ export const whyUsDesign = [
 export const designServices = [
   {
     title: "Logo Design",
-    description: "Identitas visual yang memorable",
+    description: "Identitas visual yang mudah diingat dan profesional",
+    originalPrice: "Rp 349k",
     price: "Rp 249k",
+    discount: 29,
     popular: true,
     features: [
       {
-        title: "Brand Research",
+        title: "Riset Brand",
         description:
-          "Riset kompetitor dan analisis market untuk positioning yang tepat",
+          "Analisis kompetitor dan riset pasar untuk positioning yang tepat",
       },
       {
-        title: "Multiple Concepts",
-        description:
-          "3-5 konsep logo yang berbeda untuk dipilih sesuai preferensi",
+        title: "Beberapa Konsep",
+        description: "3-5 konsep logo berbeda untuk dipilih sesuai preferensi",
       },
       {
-        title: "Unlimited Revisions",
-        description:
-          "Revisi tanpa batas hingga hasil sesuai dengan ekspektasi Anda",
+        title: "Revisi Tanpa Batas",
+        description: "Revisi hingga hasil sesuai ekspektasi Anda",
       },
       {
-        title: "Complete File Package",
-        description:
-          "Semua format file (PNG, SVG, EPS, PDF) untuk berbagai kebutuhan",
+        title: "Paket File Lengkap",
+        description: "Semua format file (PNG, SVG, EPS, PDF) siap digunakan",
       },
     ],
   },
   {
     title: "Branding",
-    description: "Paket branding lengkap untuk identitas bisnis",
-    price: "Rp 1.2 JT",
+    description: "Paket branding lengkap untuk identitas bisnis yang konsisten",
+    originalPrice: "Rp 1.5 jt",
+    price: "Rp 1.2 jt",
+    discount: 20,
     features: [
       {
-        title: "Brand Strategy",
-        description:
-          "Pengembangan strategi brand positioning dan brand personality",
+        title: "Strategi Brand",
+        description: "Pengembangan strategi positioning dan brand personality",
       },
       {
-        title: "Visual Identity System",
+        title: "Sistem Identitas Visual",
         description:
-          "Logo, color palette, typography, dan elemen visual konsisten",
+          "Logo, palet warna, tipografi, dan elemen visual konsisten",
       },
       {
-        title: "Brand Guidelines",
-        description:
-          "Panduan lengkap penggunaan brand untuk konsistensi di semua media",
+        title: "Panduan Brand",
+        description: "Dokumen lengkap penggunaan brand di berbagai media",
       },
       {
-        title: "Marketing Collaterals",
-        description:
-          "Desain business card, letterhead, dan material marketing lainnya",
+        title: "Desain Marketing",
+        description: "Kartu nama, kop surat, dan materi promosi lainnya",
       },
     ],
   },
   {
-    title: "Custom Design",
-    description: "Solusi desain fleksibel sesuai kebutuhan unik Anda",
-    price: "Custom",
+    title: "Social Media",
+    description: "Desain konten kreatif untuk media sosial per bulan:",
+    originalPrice: "Rp 1 jt",
+    price: "Rp 750k",
+    discount: 25,
     features: [
       {
-        title: "Tailored to Your Needs",
+        title: "Konten Menarik",
         description:
-          "Desain dibuat khusus sesuai brief, ide, dan karakter bisnis Anda",
+          "Desain feed, story, reels, dan iklan dengan gaya yang konsisten",
       },
       {
-        title: "Wide Range of Deliverables",
-        description:
-          "Bisa untuk social media, packaging, UI/UX, poster, dan lainnya",
+        title: "Template Siap Pakai",
+        description: "File template yang mudah diubah untuk kebutuhan harian",
       },
       {
-        title: "Collaborative Process",
-        description:
-          "Diskusi intensif dengan tim kami untuk memastikan hasil optimal",
+        title: "Optimasi Branding",
+        description: "Setiap konten disesuaikan dengan identitas brand Anda",
       },
       {
-        title: "Flexible Pricing",
+        title: "Kalender Konten",
         description:
-          "Harga menyesuaikan kompleksitas proyek dan scope pekerjaan",
+          "Rencana desain per bulan untuk memudahkan posting terjadwal",
+      },
+    ],
+  },
+  {
+    title: "Custom",
+    description: "Solusi desain fleksibel sesuai kebutuhan unik bisnis Anda",
+    price: "Rp. -",
+    features: [
+      {
+        title: "Desain Sesuai Brief",
+        description:
+          "Desain dibuat sesuai ide, konsep, dan karakter bisnis Anda",
+      },
+      {
+        title: "Beragam Jenis Desain",
+        description:
+          "Packaging, poster, brosur, presentasi, UI/UX, dan lainnya",
+      },
+      {
+        title: "Proses Kolaboratif",
+        description: "Diskusi intensif untuk memastikan hasil yang optimal",
+      },
+      {
+        title: "Harga Fleksibel",
+        description:
+          "Menyesuaikan kompleksitas proyek dan ruang lingkup pekerjaan",
       },
     ],
   },

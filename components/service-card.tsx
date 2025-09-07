@@ -28,6 +28,8 @@ interface ServiceCardProps {
   title: string;
   description: string;
   price: string;
+  originalPrice?: string;
+  discount?: number;
   features: ServiceFeature[];
   popular?: boolean;
 }
@@ -36,6 +38,8 @@ export default function ServiceCard({
   title,
   description,
   price,
+  originalPrice,
+  discount,
   features,
   popular = false,
 }: ServiceCardProps) {
@@ -54,7 +58,9 @@ export default function ServiceCard({
           Most Popular
         </Badge>
       )}
-      <CardHeader className=" ">
+      
+
+      <CardHeader className="">
         <CardTitle className="font-space-grotesk text-2xl sm:text-4xl mb-4 text-primary ">
           {title}
         </CardTitle>
@@ -62,7 +68,26 @@ export default function ServiceCard({
           {description}
         </CardDescription>
         <div className="mt-4">
-          <span className="text-4xl font-bold">{price}</span>
+          {originalPrice && discount ? (
+            <div className="flex items-center gap-3 flex-wrap">
+              <span className="text-2xl text-white/60 line-through">
+                {originalPrice}
+              </span>
+              <div className="flex items-center gap-2">
+                <span className="text-4xl font-bold text-white">
+                  {price}
+                </span>
+                <Badge
+                  className="bg-gradient-to-r from-red-500 via-red-600 to-red-700 
+                     text-white font-bold text-sm rounded-full px-3 py-1 shadow-lg animate-pulse"
+                >
+                  -{discount}%
+                </Badge>
+              </div>
+            </div>
+          ) : (
+            <span className="text-4xl font-bold">{price}</span>
+          )}
         </div>
       </CardHeader>
       <CardContent className="space-y-6">

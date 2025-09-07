@@ -2,7 +2,9 @@ export const websiteServices = [
   {
     title: "Landing Page",
     description: "Single page website yang powerful",
+    originalPrice: "Rp 799k",
     price: "Rp 599k",
+    discount: 25,
     features: [
       {
         title: "Responsive Design",
@@ -29,7 +31,9 @@ export const websiteServices = [
   {
     title: "Static Website",
     description: "Website multi-halaman untuk company profile",
-    price: "Rp. 950k",
+    originalPrice: "Rp 1.3 jt",
+    price: "Rp 950k",
+    discount: 27,
     popular: true,
     features: [
       {
@@ -56,7 +60,9 @@ export const websiteServices = [
   {
     title: "E-commerce Web",
     description: "Toko online lengkap dengan sistem pembayaran",
-    price: "Rp. 3 jt",
+    originalPrice: "Rp 4 jt",
+    price: "Rp 3 jt",
+    discount: 25,
     features: [
       {
         title: "Product Catalog",
@@ -82,7 +88,9 @@ export const websiteServices = [
   {
     title: "POS Web App",
     description: "Aplikasi Point of Sale berbasis web",
-    price: "Rp. 1.2 JT",
+    originalPrice: "Rp 1.5 JT",
+    price: "Rp 1.2 JT",
+    discount: 20,
     features: [
       {
         title: "Sales Management",
@@ -133,7 +141,6 @@ export const websiteServices = [
     ],
   },
 ];
-
 export const whyUsWeb = [
   {
     icon: "award",

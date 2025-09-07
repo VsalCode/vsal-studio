@@ -26,6 +26,7 @@ interface WhyUsItem {
   icon: string
   title: string
   description: string
+  color?: string // warna fix, biar ga random
 }
 
 interface WhyUsProps {
@@ -51,14 +52,21 @@ export const WhyUs: React.FC<WhyUsProps> = ({ title, subtitle, items }) => {
             return (
               <div
                 key={i}
-                className="bg-zinc-900 p-6 rounded-2xl shadow-lg hover:shadow-xl 
-                           border border-white/10 transition-all duration-300 text-center hover:scale-103"
+                className="bg-gray-dark p-6 rounded-2xl shadow-lg hover:shadow-xl 
+                           border border-white/10 transition-all duration-300 text-center hover:scale-105"
               >
-                {Icon ? (
-                  <Icon className="w-10 h-10 text-primary mx-auto mb-4" />
-                ) : (
-                  <div className="w-10 h-10 mx-auto mb-4 bg-primary/20 rounded-lg" />
-                )}
+                <div
+                  className={`w-14 h-14 flex items-center justify-center rounded-xl text-primary mx-auto mb-6 ${
+                    item.color ?? "bg-secondary"
+                  }`}
+                >
+                  {Icon ? (
+                    <Icon className="w-7 h-7" />
+                  ) : (
+                    <div className="w-7 h-7 bg-white/30 rounded" />
+                  )}
+                </div>
+
                 <h3 className="text-lg font-semibold text-white mb-2">
                   {item.title}
                 </h3>

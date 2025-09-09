@@ -2,10 +2,8 @@ import type React from "react";
 import type { Metadata } from "next";
 import { Space_Grotesk, DM_Sans } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
-import ScrollToTopButton from "@/components/scroll-top-button";
-import WhatsAppButton from "@/components/wa-button";
+import ClientLayout from "./client-layout"; // kita buat file baru
+// ↑ ClientLayout akan handle SplashScreen & komponen client
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -31,20 +29,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html
       lang="en"
       className={`${spaceGrotesk.variable} ${dmSans.variable} antialiased`}
     >
       <body className="font-sans">
-        <Navbar />
-        {children}
-        <Footer />
-        <ScrollToTopButton />
-        <WhatsAppButton />
+        <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
   );

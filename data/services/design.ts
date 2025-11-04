@@ -64,11 +64,11 @@ export const designServices = [
       },
       {
         title: "Beberapa Konsep",
-        description: "3-5 konsep logo berbeda untuk dipilih sesuai preferensi",
+        description: "2-3 konsep logo berbeda untuk dipilih sesuai preferensi",
       },
       {
-        title: "Revisi Tanpa Batas",
-        description: "Revisi hingga hasil sesuai ekspektasi Anda",
+        title: "100% Desain Original",
+        description: "Garansi orisinalitas, tanpa plagiarisme",
       },
       {
         title: "Paket File Lengkap",
@@ -79,22 +79,22 @@ export const designServices = [
   {
     title: "Branding",
     description: "Paket branding lengkap untuk identitas bisnis yang konsisten",
-    originalPrice: "Rp 1.5 jt",
-    price: "Rp 1.2 jt",
+    originalPrice: "Rp 2.5 jt",
+    price: "Rp 1.7 jt",
     discount: 20,
     features: [
       {
-        title: "Strategi Brand",
-        description: "Pengembangan strategi positioning dan brand personality",
-      },
-      {
-        title: "Sistem Identitas Visual",
-        description:
-          "Logo, palet warna, tipografi, dan elemen visual konsisten",
+        title: "Logo Profesional",
+        description: "Desain logo yang mencerminkan nilai dan visi bisnis Anda",
       },
       {
         title: "Panduan Brand",
         description: "Dokumen lengkap penggunaan brand di berbagai media",
+      },
+      {
+        title: "Social Media Kit",
+        description:
+          "konten visual siap pakai untuk profil dan posting media sosial",
       },
       {
         title: "Desain Marketing",

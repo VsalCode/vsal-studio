@@ -22,9 +22,9 @@ export const websiteServices = [
           "Form kontak terintegrasi dengan notifikasi email otomatis",
       },
       {
-        title: "SEO Ready",
+        title: "CTA",
         description:
-          "Struktur HTML yang SEO-friendly dan meta tags yang optimal",
+          "Call-to-Action strategis untuk meningkatkan konversi pengunjung",
       },
     ],
   },
@@ -37,31 +37,30 @@ export const websiteServices = [
     popular: true,
     features: [
       {
-        title: "Multi-Page Structure",
-        description:
-          "5-7 halaman lengkap: Home, About, Services, Portfolio, Contact",
+        title: "All Fitur Landing Page",
+        description: "Termasuk semua fitur dari paket Landing Page",
       },
       {
-        title: "CMS Integration",
+        title: "Multi-Page Structure",
         description:
-          "Content Management System untuk update konten secara mandiri",
+          "4-7 halaman lengkap: Home, About, Services, Portfolio, Contact",
       },
       {
         title: "Gallery & Portfolio",
         description: "Showcase produk atau layanan dengan gallery yang menarik",
       },
       {
-        title: "Google Analytics",
+        title: "Dark & Light Mode Features",
         description:
-          "Setup tracking dan analytics untuk monitoring traffic website",
+          "Opsi mode gelap dan terang untuk pengalaman pengguna yang lebih baik",
       },
     ],
   },
   {
     title: "E-commerce Web",
     description: "Toko online lengkap dengan sistem pembayaran",
-    originalPrice: "Rp 4 jt",
-    price: "Rp 3 jt",
+    originalPrice: "Rp 15 jt",
+    price: "*Rp 5.4 jt",
     discount: 25,
     features: [
       {
@@ -88,31 +87,30 @@ export const websiteServices = [
   {
     title: "POS Web App",
     description: "Aplikasi Point of Sale berbasis web",
-    originalPrice: "Rp 1.5 JT",
-    price: "Rp 1.2 JT",
+    originalPrice: "Rp 5 JT",
+    price: "Rp 2.7 JT",
     discount: 20,
     features: [
       {
-        title: "Sales Management",
-        description:
-          "Sistem penjualan lengkap dengan barcode scanner dan receipt printer",
+        title: "Transaksi Penjualan",
+        description: "Pencatatan penjualan harian secara cepat dan mudah",
       },
       {
-        title: "Inventory Control",
-        description: "Manajemen stok real-time dengan alert low stock otomatis",
+        title: "Manajemen Produk",
+        description:
+          "Tambah, edit, dan hapus data produk dengan harga dan stok",
       },
       {
-        title: "Reporting Dashboard",
-        description:
-          "Laporan penjualan, profit, dan analytics bisnis yang komprehensif",
+        title: "Laporan Penjualan",
+        description: "Rekap penjualan otomatis per hari, minggu, atau bulan",
       },
       {
-        title: "Multi-User Access",
-        description:
-          "Sistem user dengan role-based access untuk kasir dan admin",
+        title: "Manajemen Pengguna",
+        description: "Akses untuk kasir dan admin dengan login terpisah",
       },
     ],
   },
+
   {
     title: "Custom Website",
     description: "Website kustom sesuai kebutuhan spesifik",

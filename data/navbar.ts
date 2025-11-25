@@ -48,7 +48,7 @@ export const desktopNavItems = [
       },
       {
         name: "Media Sosial",
-        href: "/design",
+        href: "/socmed",
         icon: TiSocialInstagram,
         description: "Pengelolaan dan konten media sosial",
         class: "bg-gradient-to-br from-[#640D5F] to-[#C59560] text-primary flex justify-center items-center rounded-lg p-2"
@@ -114,6 +114,12 @@ export const services = [
     href: "/design",
     icon: Palette,
     description: "Creative design services",
+  },
+  {
+    name: "Socmed Content",
+    href: "/socmed",
+    icon: Palette,
+    description: "Social Media Content Management",
   },
   {
     name: "Paket Bundling",

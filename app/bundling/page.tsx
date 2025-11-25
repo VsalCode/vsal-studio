@@ -13,7 +13,7 @@ const BundlingPage = () => {
         heading="Solusi Lengkap All-in-One"
         description="Dapatkan semua layanan digital dalam satu paket hemat. Lebih efisien, lebih murah, dan tanpa ribet!"
         buttonText="Mulai Proyek"
-        imageURL="/bundling-banner.jpg"
+        imageURL="/bundling_backdrop.jpg"
       />
       <PricePlan
         id="bundling"

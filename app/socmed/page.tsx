@@ -13,7 +13,7 @@ const SocmedPage = () => {
         heading="Kelola Sosial Media Secara Profesional & Konsisten"
         description="Bangun kehadiran digital yang kuat dengan konten berkualitas, desain visual estetik, copywriting yang menarik, dan strategi yang terukur untuk perkembangan bisnis Anda."
         buttonText="Mulai Sekarang"
-        imageURL="https://i.pinimg.com/736x/ae/e9/0a/aee90ac606ac68910e12cb274fbe5870.jpg"
+        imageURL="/sosmed_backdrop.jpg"
       />
 
       <PricePlan

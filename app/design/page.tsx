@@ -13,7 +13,7 @@ const DesignPage = () => {
         heading="Tingkatkan Identitas Bisnis Anda dengan Desain Profesional"
         description="Kami membantu bisnis Anda tampil lebih menonjol dengan desain modern, identitas brand yang kuat, serta strategi visual yang membuat audiens lebih terhubung."
         buttonText="Mulai Proyek"
-        imageURL="https://images.pexels.com/photos/326508/pexels-photo-326508.jpeg"
+        imageURL="/design_backdrop.jpg"
       />
       <PricePlan
         id="design"

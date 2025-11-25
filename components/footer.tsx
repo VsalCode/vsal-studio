@@ -68,7 +68,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="https://wa.me/6281399090477" target="_blank" rel="noopener noreferrer">
-                  ( +62 ) 812-3456-7890
+                  ( +62 ) 813-9909-0477
                 </Link>
               </li>
               <li>

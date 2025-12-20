@@ -32,8 +32,7 @@ export const whyUsSocmed = [
   {
     icon: "shield",
     title: "Manajemen Aman & Transparan",
-    description:
-      "Proses kerja jelas, aman, dan tanpa biaya tersembunyi.",
+    description: "Proses kerja jelas, aman, dan tanpa biaya tersembunyi.",
   },
   {
     icon: "layers",
@@ -49,86 +48,128 @@ export const whyUsSocmed = [
   },
 ];
 
-
-
 export const SocmedServices = [
   {
     title: "Paket Starter",
-    description: "Paket hemat untuk bisnis yang ingin mulai tampil profesional di sosial media",
+    description:
+      "Paket hemat untuk bisnis yang ingin mulai tampil profesional di sosial media",
     originalPrice: "Rp 1 jt",
     price: "Rp 750k",
     discount: 25,
     popular: false,
     features: [
       {
-        title: "Konten Bulanan",
-        description: "20 Feeds, 8 Story, 3 Reels",
+        title: "15x feeds",
+        description:
+          "10 feed single post, request opsional 5 feed carousel (berisi max 3 konten dalam 1 carousel)",
       },
       {
-        title: "Copywriting",
-        description: "Caption sesuai brand tone",
+        title: "4x story",
+        description: "1 story per 1 minggu (total 4 story dalam 1 bulan)",
+      },
+      {
+        title: "3x basic reels",
+        description:
+          "3 reels dengan subtitle text dan tambahan music atau voice over dengan footage sesuai kebutuhan (tanpa content creator)",
+      },
+      {
+        title: "Free Copywriting",
+        description:
+          "copywriting untuk caption feed sesuai dengan brand tone anda",
       },
       {
         title: "Design & Editing",
         description: "Konten dengan desain visual profesional",
-      },
-      {
-        title: "Posting Schedule",
-        description: "Jadwal posting disesuaikan dengan kebutuhan",
       },
     ],
   },
 
   {
     title: "Paket Growth",
-    description: "Paket ideal untuk bisnis yang ingin meningkatkan engagement dan awareness",
+    description:
+      "Paket ideal untuk bisnis yang ingin meningkatkan engagement dan awareness",
     originalPrice: "Rp 1.7 jt",
-    price: "Rp 1.250 k",
+    price: "Rp 1.350 k",
     discount: 24,
     popular: true,
     features: [
       {
-        title: "Konten Bulanan",
-        description: "30 Feeds, 12 Story, 4 Reels",
+        title: "21 feeds",
+        description:
+          "14 feed single post, request opsional 7 feed carousel (berisi max 4 konten dalam 1 carousel)",
       },
       {
-        title: "Copywriting Premium",
-        description: "Copy yang lebih persuasive dan sesuai niche",
+        title: "8x story",
+        description: "2 story per 1 minggu (total 8 story dalam 1 bulan)",
+      },
+      {
+        title: "6x proper reels",
+        description:
+          "3 reels dengan subtitle text dan tambahan music atau voice over dengan footage sesuai kebutuhan, 3 reels dengan content creator",
+      },
+      {
+        title: "Content Creator",
+        description:
+          "3 reels dengan Konten Kreator profesional dari kami yang akan membuat reels dengan trend dan hook terupdate untuk kebutuhan engagement",
+      },
+      {
+        title: "Free Copywriting",
+        description:
+          "copywriting untuk caption feed sesuai dengan brand tone anda",
+      },
+      {
+        title: "Content Calender",
+        description:
+          "Format konten kalender dari kami agar anda dapat melihat strategi konten brand anda dalam 1 bulan",
       },
       {
         title: "Design & Editing",
-        description: "Visual lebih variatif & profesional",
-      },
-      {
-        title: "Monthly Report",
-        description: "Laporan performa bulanan (opsional)",
+        description: "Konten dengan desain visual profesional",
       },
     ],
   },
 
   {
     title: "Paket Authority",
-    description: "Paket lengkap untuk brand yang ingin membangun citra kuat dan konsisten",
+    description:
+      "Paket lengkap untuk brand yang ingin membangun citra kuat dan konsisten",
     originalPrice: "Rp 2.7 jt",
     price: "Rp 2.2 jt",
     discount: 19,
     popular: false,
     features: [
       {
-        title: "Konten Bulanan",
-        description: "40 Feeds, 20 Story, 6 Reels",
+        title: "28 feeds",
+        description:
+          "18 feed single post, request opsional 14 feed carousel (berisi max 4 konten dalam 1 carousel)",
       },
       {
-        title: "Copywriting Advanced",
-        description: "Copywriting storytelling & selling",
+        title: "12x story",
+        description: "3 story per 1 minggu (total 12 story dalam 1 bulan)",
       },
       {
-        title: "Design Premium",
-        description: "Layout lebih kompleks dan berkualitas tinggi",
+        title: "12x proper reels",
+        description:
+          "6 reels dengan subtitle text dan tambahan music atau voice over dengan footage sesuai kebutuhan, 6 reels dengan content creator",
       },
       {
-        title: "Full Management",
-        description: "Upload, monitoring & handling komentar ringan",
+        title: "Content Creator",
+        description:
+          "6 reels dengan Konten Kreator profesional dari kami yang akan membuat reels dengan trend dan hook terupdate untuk kebutuhan engagement",
+      },
+      {
+        title: "Free Copywriting",
+        description:
+          "copywriting untuk caption feed sesuai dengan brand tone anda",
+      },
+      {
+        title: "Content Calender",
+        description:
+          "Format konten kalender dari kami agar anda dapat melihat strategi konten brand anda dalam 1 bulan",
+      },
+      {
+        title: "Design & Editing",
+        description: "Konten dengan desain visual profesional",
       },
     ],
   },

@@ -26,6 +26,7 @@ interface PricePlanProps {
   subtitle: string;
   services: ServiceItem[];
 }
+// Price Plan Component
 
 export const PricePlan: React.FC<PricePlanProps> = ({
   id = "website",

@@ -41,13 +41,12 @@ export const Services = () => {
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
           {servicesData?.map((service, index) => {
             const IconComponent = service.icon;
-            const color =
-              colors[Math.floor(Math.random() * colors.length)];
+            const color = colors[Math.floor(Math.random() * colors.length)];
 
             return (
               <motion.div
                 key={service.id}
-                className="rounded-2xl p-8 border border-white/20 bg-white/10 backdrop-blur-xl shadow-lg group"
+                className="rounded-2xl p-8 border border-white/20 bg-white/10 backdrop-blur-xl shadow-lg group flex flex-col justify-between "
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 whileHover={{ scale: 1.05, y: -5 }}
@@ -58,41 +57,45 @@ export const Services = () => {
                 }}
                 viewport={{ once: true }}
               >
-                {/* Icon with random bg */}
-                <div
-                  className={`w-14 h-14 flex items-center justify-center rounded-xl text-white mb-6 ${color} shadow-md group-hover:rotate-6 transition-transform`}
-                >
-                  <IconComponent className="h-8 w-8" />
+                <div>
+                  {/* Icon with random bg */}
+                  <div
+                    className={`w-14 h-14 flex items-center justify-center rounded-xl text-white mb-6 ${color} shadow-md group-hover:rotate-6 transition-transform`}
+                  >
+                    <IconComponent className="h-8 w-8" />
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="font-space-grotesk text-2xl font-bold text-white mb-4">
+                    {service.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-white/70 mb-6">{service.description}</p>
+
+                  {/* Features List */}
+                  <ul className="text-sm text-white/60 space-y-2 mb-6">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center">
+                        <span className="text-primary mr-2">•</span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
-                {/* Title */}
-                <h3 className="font-space-grotesk text-2xl font-bold text-white mb-4">
-                  {service.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-white/70 mb-6">{service.description}</p>
-
-                {/* Features List */}
-                <ul className="text-sm text-white/60 space-y-2 mb-6">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center">
-                      <span className="text-primary mr-2">•</span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                {/* CTA Button */}
-                <Link href={service.href}>
-                  <Button
-                    variant="outline"
-                    className="w-full bg-white/5 border-white/20 text-white hover:bg-primary hover:text-white hover:border-primary transition-all"
-                  >
-                    {service.buttonText}
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </Link>
+                <div>
+                  {/* CTA Button */}
+                  <Link href={service.href}>
+                    <Button
+                      variant="outline"
+                      className="w-full bg-white/5 border-white/20 text-white hover:bg-primary hover:text-white hover:border-primary transition-all"
+                    >
+                      {service.buttonText}
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
+                </div>
               </motion.div>
             );
           })}

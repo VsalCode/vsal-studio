@@ -6,41 +6,44 @@ export const servicesData = [
     icon: Package,
     title: "Paket Bundling",
     description:
-      "Solusi lengkap mulai dari Paket Perintis untuk startup hingga Paket Pesugihan untuk enterprise",
+      "Solusi lengkap untuk membangun brand digital, dari startup hingga bisnis skala enterprise",
     features: [
-      "Website + Logo + Social Media",
-      "Paket hemat untuk semua kebutuhan",
-      "Support dan maintenance included",
+      "Website, logo, dan social media dalam satu paket",
+      "Lebih hemat & terintegrasi",
+      "Support dan maintenance berkelanjutan",
     ],
     buttonText: "Lihat Paket Bundling",
-    href: "/services#bundling",
+    href: "/bundling",
   },
   {
     id: "website",
     icon: Globe,
-    title: "Website Development",
+    title: "Website Dev",
     description:
-      "Dari landing page sederhana hingga aplikasi web kompleks dengan fitur custom",
+      "Pengembangan website profesional, dari landing page hingga web app dengan fitur custom",
     features: [
-      "Landing Page & Static Website",
+      "Landing Page & Company Profile",
       "E-commerce & POS Web App",
       "Custom Web Development",
+      "Free Hosting & Domain"
     ],
-    buttonText: "Lihat Website Services",
-    href: "/services#website",
+    buttonText: "Lihat Layanan Website",
+    href: "/website",
   },
   {
-    id: "design",
+    id: "socmed",
     icon: Palette,
-    title: "Design Services",
+    title: "Socmed Content",
     description:
-      "Identitas visual yang kuat mulai dari logo design hingga complete branding",
+      "Konten visual yang konsisten dan menarik untuk memperkuat identitas brand di media sosial",
     features: [
-      "Logo Design & Branding",
-      "Social Media Content",
-      "Brand Guidelines & Identity",
+      "Branding & Visual Identity",
+      "Konten Instagram & Social Media",
+      "Brand Guidelines",
+      "Content Calendar",
+      "Free Content Creator*"
     ],
-    buttonText: "Lihat Design Services",
-    href: "/services#design",
+    buttonText: "Lihat Layanan Sosial Media",
+    href: "/socmed",
   },
 ];

@@ -21,10 +21,10 @@ export const desktopNavItems = [
     desc: "Kembali ke halaman utama" 
   },
   { 
-    name: "Tentang Kami", 
-    href: "/#about", 
+    name: "Our Works", 
+    href: "/portfolio", 
     icon: IoPeople, 
-    desc: "Tak kenal maka tak sayang, kenali kami lebih jauh" 
+    desc: "Masih Ragu? Lihat hasil kerja kami disini!" 
   },
   {
     name: "Layanan",

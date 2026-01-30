@@ -24,6 +24,7 @@ export default function Navbar() {
     bg-black/70 backdrop-blur-md 
     rounded-full shadow-lg border border-primary/30 
     py-[5px] px-[4px]
+    font-nunito
   `}
       >
         <nav className="flex items-center justify-between w-full">

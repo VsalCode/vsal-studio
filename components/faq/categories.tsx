@@ -12,8 +12,8 @@ export const Categories = () => {
             {faqCategories.map((category, categoryIndex) => (
               <div key={categoryIndex} className="mb-12">
                 <div className="flex items-center mb-8">
-                  <div className="bg-white/30 p-3 rounded-lg mr-4">
-                    <category.icon className="h-6 w-6 text-primary" />
+                  <div className="bg-primary p-3 rounded-lg mr-4">
+                    <category.icon className="h-6 w-6 text-secondary" />
                   </div>
                   <h2 className="font-space-grotesk text-3xl font-bold text-white">{category.title}</h2>
                 </div>
@@ -23,7 +23,7 @@ export const Categories = () => {
                     <AccordionItem
                       key={faqIndex}
                       value={`${categoryIndex}-${faqIndex}`}
-                      className="border border-primary rounded-lg px-6 bg-secondary/60 backdrop-blur-xl shadow-lg"
+                      className="border border-primary rounded-lg px-6 bg-black/40 backdrop-blur-xl shadow-lg"
                     >
                       <AccordionTrigger className="text-left hover:text-primary transition-colors py-6">
                         <span className="font-medium text-white pr-4">{faq.question}</span>

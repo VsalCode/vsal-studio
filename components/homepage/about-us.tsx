@@ -3,13 +3,13 @@ import { Badge } from "@/components/ui/badge"
 
 export const AboutUs = () => {
   return (
-    <section id="about" className="py-20">
+    <section id="about" className="py-20 font-nunito">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <Badge className="mb-6 bg-primary/10 text-primary border-primary/20">About Vsal Studio</Badge>
-              <h2 className="font-space-grotesk text-4xl font-bold text-white mb-6">
+              <h2 className=" text-4xl font-medium text-white mb-6">
                 We Create Digital Experiences That Matter
               </h2>
               <p className="text-white/70 text-lg mb-6 leading-relaxed">

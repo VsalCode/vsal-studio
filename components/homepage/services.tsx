@@ -21,24 +21,41 @@ const colors = [
 
 export const Services = () => {
   return (
-    <section id="services" className="py-20">
+    <section id="services" className="py-20 ">
       <div className="container mx-auto px-4">
-        {/* Header Section */}
-        <div className="text-center mb-16">
-          <Badge className="mb-6 bg-primary/10 text-primary border-primary/20">
+        <div className="text-center mb-16 font-montserrat">
+          <Badge
+            className="
+          mb-6
+          bg-primary/10 text-primary border-primary/20
+        "
+          >
             Our Services
           </Badge>
-          <h2 className="font-space-grotesk text-4xl font-bold text-white mb-6">
+
+          <h2
+            className="
+           text-4xl font-semibold mb-6
+          text-white
+        "
+          >
             Complete Digital Solutions
           </h2>
-          <p className="text-white/70 text-lg max-w-2xl mx-auto">
+
+          <p
+            className="
+          text-lg max-w-2xl mx-auto
+          text-gray-600
+          text-white/70
+        "
+          >
             Dari website development hingga branding lengkap, kami menyediakan
             semua yang Anda butuhkan untuk sukses digital
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
+        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12 font-nunito">
           {servicesData?.map((service, index) => {
             const IconComponent = service.icon;
             const color = colors[Math.floor(Math.random() * colors.length)];
@@ -46,7 +63,17 @@ export const Services = () => {
             return (
               <motion.div
                 key={service.id}
-                className="rounded-2xl p-8 border border-white/20 bg-white/10 backdrop-blur-xl shadow-lg group flex flex-col justify-between "
+                className="
+    relative overflow-hidden
+    rounded-2xl p-8
+    flex flex-col justify-between
+    group
+    transition-all
+    border
+    shadow-md hover:shadow-lg
+    border-primary/40
+    bg-black/40
+  "
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 whileHover={{ scale: 1.05, y: -5 }}
@@ -57,24 +84,40 @@ export const Services = () => {
                 }}
                 viewport={{ once: true }}
               >
-                <div>
-                  {/* Icon with random bg */}
+                {/* Background Image */}
+                <div
+                  className="
+      absolute inset-0
+      bg-cover bg-center
+      scale-100 group-hover:scale-110
+      transition-transform duration-700
+    "
+                  // style={{ backgroundImage: `url(${service.image})` }}
+                />
+
+                {/* CONTENT */}
+                <div className="relative z-10">
+                  {/* Icon */}
                   <div
-                    className={`w-14 h-14 flex items-center justify-center rounded-xl text-white mb-6 ${color} shadow-md group-hover:rotate-6 transition-transform`}
+                    className={`
+        w-14 h-14 flex items-center justify-center
+        rounded-xl text-white mb-6 shadow-md
+        ${color}
+        group-hover:rotate-6 transition-transform
+      `}
                   >
                     <IconComponent className="h-8 w-8" />
                   </div>
 
-                  {/* Title */}
-                  <h3 className="font-space-grotesk text-2xl font-bold text-white mb-4">
+                  <h3 className="text-2xl font-semibold mb-4 text-white">
                     {service.title}
                   </h3>
 
-                  {/* Description */}
-                  <p className="text-white/70 mb-6">{service.description}</p>
+                  <p className="mb-6 text-gray-700 text-white/80">
+                    {service.description}
+                  </p>
 
-                  {/* Features List */}
-                  <ul className="text-sm text-white/60 space-y-2 mb-6">
+                  <ul className="text-sm space-y-2 mb-6 text-gray-600 text-white/70">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center">
                         <span className="text-primary mr-2">•</span>
@@ -84,12 +127,17 @@ export const Services = () => {
                   </ul>
                 </div>
 
-                <div>
-                  {/* CTA Button */}
+                {/* CTA */}
+                <div className="relative z-10">
                   <Link href={service.href}>
                     <Button
-                      variant="outline"
-                      className="w-full bg-white/5 border-white/20 text-white hover:bg-primary hover:text-white hover:border-primary transition-all"
+                      className="
+          w-full
+          font-medium
+                    bg-primary text-secondary\
+                    hover:bg-white hover:text-secondary
+          duration-300
+          "
                     >
                       {service.buttonText}
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -100,25 +148,6 @@ export const Services = () => {
             );
           })}
         </div>
-
-        {/* Bottom CTA */}
-        <motion.div
-          className="text-center"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          viewport={{ once: true }}
-        >
-          <Link href="/services">
-            <Button
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground group shadow-lg"
-            >
-              Lihat Semua Services & Pricing
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </Link>
-        </motion.div>
       </div>
     </section>
   );

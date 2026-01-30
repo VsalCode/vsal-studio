@@ -27,7 +27,7 @@ export const Banner = () => {
   return (
     <section
       id="home"
-      className="flex flex-col justify-center items-center relative py-6 sm:py-20 overflow-hidden  h-screen"
+      className="font-nunito flex flex-col justify-center items-center relative py-6 sm:py-20 overflow-hidden  h-screen"
     >
       {/* Plasma background full cover */}
       <div className="absolute inset-0">
@@ -51,7 +51,7 @@ export const Banner = () => {
             animateBy="words"
             direction="top"
             onAnimationComplete={handleAnimationComplete}
-            className="block text-center font-sans text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
+            className="font-montserrat font-semibold block text-center text-4xl md:text-6xl lg:text-7xl text-white mb-6"
           />
           <ShinyText
             text="bantu bisnis kamu tampil lebih standout lewat website yang menarik,
@@ -66,7 +66,7 @@ export const Banner = () => {
             <Button
               onClick={handleWhatsApp}
               size="lg"
-              className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-secondary font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-secondary font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             >
               Start Your Project
               <ArrowRight className="ml-2 h-4 w-4" />

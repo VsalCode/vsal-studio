@@ -2,7 +2,8 @@
 
 import { testimonials } from "@/data/testimonials";
 import Marquee from "../marquee";
-
+import { IoMdQuote } from "react-icons/io";
+import { Quote } from "lucide-react";
 
 function TestimonialCard({
   img,
@@ -16,51 +17,56 @@ function TestimonialCard({
   desc: string;
 }) {
   return (
-   <div className="flex flex-col items-center 
-    bg-white/10 rounded-2xl p-6 w-[280px] sm:w-[320px] 
-    backdrop-blur-md border border-white/10 
-    shadow-lg hover:shadow-xl hover:scale-105
-    transition-all duration-300 ease-in-out group mx-2">
+    <div
+      className="
+        relative w-[420px] sm:w-[520px]
+        rounded-2xl p-8 mx-4
+        border border-primary/50
+        shadow-sm
+        bg-black/40 text-white/90
+        font-nunito
+      "
+    >
+      {/* Quote icon */}
+      <div className="absolute -top-5 left-6 text-[3rem] text-primary/80">
+        <IoMdQuote />
+      </div>
 
-  {/* Avatar */}
-  <div className="w-20 h-20 mb-4 rounded-full overflow-hidden ring-2 ring-white/20 group-hover:ring-primary transition-all duration-300">
-    <img
-      src={img}
-      alt={name}
-      className="w-full h-full object-cover"
-    />
-  </div>
+      {/* Quote text */}
+      <p className="text-white/90 text-xl leading-snug mb-4">{desc}</p>
 
-  {/* Name */}
-  <p className="text-white font-semibold group-hover:text-primary transition-colors duration-300">
-    {name}
-  </p>
+      {/* Divider */}
+      <div className="w-full h-px bg-white/10 my-6" />
 
-  {/* Role */}
-  <p className="text-gray-400 text-sm mb-3 group-hover:text-primary/80 transition-colors duration-300">
-    {role}
-  </p>
-
-  {/* Description */}
-  <p className="text-gray-300 text-sm leading-relaxed text-center group-hover:text-gray-100 transition-colors duration-300">
-    {desc}
-  </p>
-</div>
-
+      {/* Author */}
+      <div className="flex items-center gap-4">
+        <img
+          src={img}
+          alt={name}
+          className="w-12 h-12 rounded-full object-cover"
+        />
+        <div>
+          <p className="font-semibold">{name}</p>
+          <p className="text-sm text-white/60">{role}</p>
+        </div>
+      </div>
+    </div>
   );
 }
 
 export default function Testimonials() {
   return (
-    <section className="py-20  relative overflow-hidden">
-      <div className="text-center mb-12">
-        <h2 className="font-space-grotesk text-3xl font-bold text-white mb-4">
+    <section className="py-24 overflow-hidden ">
+      <div className="text-center mb-14 font-montserrat">
+        <h2 className=" text-3xl font-semibold text-white">
           What Our Clients Say
         </h2>
-        <p className="text-gray-400 mt-2">Apa kata mereka setelah mengembangkan digitalisasi bisnis mereka bersama vsal studio</p>
+        <p className="mt-2 text-white/60">
+          Apa kata mereka setelah mengembangkan digitalisasi bisnis mereka
+          bersama vsal studio
+        </p>
       </div>
 
-      {/* Row 1 → kanan */}
       <Marquee>
         {testimonials?.map((t) => (
           <TestimonialCard key={t.id} {...t} />

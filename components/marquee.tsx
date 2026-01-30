@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 interface MarqueeProps {
-  className?: string
-  reverse?: boolean
-  pauseOnHover?: boolean
-  children?: React.ReactNode
-  vertical?: boolean
-  repeat?: number
-  // [key: string]: any
+  className?: string;
+  reverse?: boolean;
+  pauseOnHover?: boolean;
+  children?: React.ReactNode;
+  vertical?: boolean;
+  repeat?: number;
+  gap?: string; // 👈 NEW (contoh: "0.5rem", "1rem", "24px")
 }
 
 export default function Marquee({
@@ -21,13 +21,17 @@ export default function Marquee({
   children,
   vertical = false,
   repeat = 4,
+  gap = "0.5rem", // 👈 default
   ...props
 }: MarqueeProps) {
   return (
     <div
       {...props}
+      style={{
+        ["--gap" as any]: gap,
+      }}
       className={cn(
-        "group flex overflow-hidden p-2 [--duration:40s] [--gap:0.5rem] [gap:var(--gap)]", // Ubah dari 1rem ke 0.5rem
+        "group flex overflow-hidden p-2 [--duration:40s] [gap:var(--gap)]",
         {
           "flex-row": !vertical,
           "flex-col": vertical,
@@ -51,5 +55,5 @@ export default function Marquee({
           </div>
         ))}
     </div>
-  )
+  );
 }

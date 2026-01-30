@@ -15,6 +15,14 @@ button {
   @apply  backdrop-blur-md shadow-lg border border-primary/30
 }
 
+.font-montserrat {
+  font-family: var(--font-montserrat) !important;
+}
+
+.font-nunito {
+  font-family: var(--font-nunito) !important;
+}
+
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.102 0 0);
@@ -138,7 +146,7 @@ button {
   --color-sidebar-ring: var(--sidebar-ring);
   /* Added font family variables for Space Grotesk and DM Sans */
   --font-sans: var(--font-dm-sans);
-  --font-space-grotesk: var(--font-space-grotesk);
+--font-heading: var(--font-space-grotesk);
   /* Added marquee animations */
   --animation-marquee: marquee var(--duration) linear infinite;
   --animation-marquee-vertical: marquee-vertical var(--duration) linear infinite;

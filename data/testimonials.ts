@@ -35,7 +35,7 @@ export const testimonials = [
     desc: "Sebagai brand baru, kami sempat kesulitan memperkenalkan produk ke pasar. Bersama VSAL Studio, brand Vieco tampil lebih menonjol dan dipercaya oleh audiens yang tepat.",
   },
   {
-    id: 5,
+    id: 6,
     name: "Bebew Pii",
     role: "Owner Terserah Cafe",
     img: "/owners/bebew.png",

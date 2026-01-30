@@ -6,6 +6,7 @@ import type React from "react";
 import { Badge } from "./ui/badge";
 import BlurText from "./react-bits/blur-text";
 import ShinyText from "./react-bits/shinny-text";
+import Image from "next/image";
 
 interface HeaderSectionProps {
   chip: string;
@@ -31,7 +32,14 @@ export const HeaderSection: React.FC<HeaderSectionProps> = ({
   backText = "Back to Home",
 }) => {
   return (
-    <section className="relative py-20  text-center h-screen flex flex-col justify-center items-center">
+    <section className="relative py-20  text-center h-screen flex flex-col justify-center items-center font-montserrat">
+
+      <Image 
+      src={"https://i.pinimg.com/1200x/54/8e/db/548edbf432bfde6e4869f2a0b35320ed.jpg"}
+      alt="bg-image"
+      fill
+      />
+
       <div className="container mx-auto px-4 relative z-10 flex flex-col justify-center items-center">
         <div className="max-w-4xl mx-auto text-center">
           {showBackButton && (
@@ -57,7 +65,7 @@ export const HeaderSection: React.FC<HeaderSectionProps> = ({
             animateBy="words"
             direction="top"
             onAnimationComplete={handleAnimationComplete}
-            className="block text-center font-sans text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
+            className="block text-center font-sans text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 font-montserrat"
           />
           <br />
           <BlurText
@@ -66,7 +74,7 @@ export const HeaderSection: React.FC<HeaderSectionProps> = ({
             animateBy="words"
             direction="top"
             onAnimationComplete={handleAnimationComplete}
-            className="block text-center font-sans text-4xl md:text-6xl lg:text-7xl font-bold text-primary mb-6 "
+            className="block text-center font-sans text-4xl md:text-6xl lg:text-7xl font-bold text-primary mb-6 font-montserrat "
           />
           <ShinyText
             text={desc}

@@ -2,8 +2,8 @@ export const websiteServices = [
   {
     title: "Landing Page",
     description: "Single page website yang powerful",
-    originalPrice: "Rp 799k",
-    price: "Rp 599k",
+    originalPrice: "Rp 1 jt",
+    price: "Rp 670k",
     discount: 25,
     features: [
       {
@@ -31,8 +31,8 @@ export const websiteServices = [
   {
     title: "Static Website",
     description: "Website multi-halaman untuk company profile",
-    originalPrice: "Rp 1.3 jt",
-    price: "Rp 950k",
+    originalPrice: "Rp 1.5 jt",
+    price: "Rp 970k",
     discount: 27,
     popular: true,
     features: [

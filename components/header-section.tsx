@@ -35,7 +35,7 @@ export const HeaderSection: React.FC<HeaderSectionProps> = ({
     <section className="relative py-20  text-center h-screen flex flex-col justify-center items-center font-montserrat">
 
       <Image 
-      src={"https://i.pinimg.com/1200x/54/8e/db/548edbf432bfde6e4869f2a0b35320ed.jpg"}
+      src={"https://i.pinimg.com/736x/33/f0/db/33f0dbc7f8e57ff5d62e3d4e17c4a74f.jpg"}
       alt="bg-image"
       fill
       />

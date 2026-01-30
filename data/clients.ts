@@ -6,7 +6,6 @@
     { name: "Hoshi Group", logo: "/clients/Hoshi-01.png" },
     { name: "Javara Beans", logo: "/clients/javana-01.png" },
     { name: "Pt. Afamec Global Ekspor", logo: "/clients/Logo Horizontal.png" },
-    // { name: "Manufacturing Engineering Exploration", logo: "/clients/logo Me-X-02.jpg" },
     { name: "Amsindo", logo: "/clients/Logo utama.png" },
     { name: "Cv. Dwiva Yasa", logo: "/clients/Logo Variasi Merah-14.png" },
     { name: "Persaja", logo: "/clients/Logo vertikal (2).png" },
@@ -19,4 +18,6 @@
     { name: "Kampoeng Dahar", logo: "/clients/Untitled-2_Artboard 1.png" },
     { name: "K Tivi", logo: "/clients/Untitled-2-02.png" },
     { name: "Xivia", logo: "/clients/xiva-01.png" },
+    { name: "Healinc Tour", logo: "/clients/Healinc.png" },
+    { name: "Moment Exploria Tour", logo: "/clients/moment.png" },
   ]

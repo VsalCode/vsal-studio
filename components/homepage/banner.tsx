@@ -5,19 +5,16 @@ import { ArrowRight } from "lucide-react";
 import BlurText from "../react-bits/blur-text";
 import Aurora from "../react-bits/aurora-background";
 import ShinyText from "../react-bits/shinny-text";
+import Link from "next/link";
 
 export const Banner = () => {
   const handleWhatsApp = () => {
     const phoneNumber = "6281399090477";
     const message = "Halo, saya ingin memulai project dengan tim Anda";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-      message
+      message,
     )}`;
     window.open(whatsappUrl, "_blank");
-  };
-
-  const handleInstagram = () => {
-    window.open("https://instagram.com/vsal.works", "_blank");
   };
 
   const handleAnimationComplete = () => {
@@ -71,14 +68,15 @@ export const Banner = () => {
               Start Your Project
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
-            <Button
-              onClick={handleInstagram}
-              size="lg"
-              variant="outline"
-              className="border-white/30 text-white hover:bg-white/10 hover:text-white bg-white/5 backdrop-blur-sm transition-all duration-300 transform hover:scale-105"
-            >
-              View Our Work
-            </Button>
+            <Link href={"/portfolio"}>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white/30 text-white hover:bg-white/10 hover:text-white bg-white/5 backdrop-blur-sm transition-all duration-300 transform hover:scale-105"
+              >
+                View Our Work
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

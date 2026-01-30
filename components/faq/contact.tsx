@@ -18,9 +18,9 @@ export const Contact = () => {
             dengan konsultasi gratis dan tanpa komitmen.
           </p>
           <div className="grid md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-background rounded-lg p-6 border border-border">
+            <div className="bg-black/40 text-white rounded-lg p-6 border border-primary/50">
               <MessageCircle className="h-8 w-8 text-primary mx-auto mb-4" />
-              <h3 className="font-semibold text-secondary mb-2">WhatsApp</h3>
+              <h3 className="font-semibold mb-2">WhatsApp</h3>
               <p className="text-sm text-muted-foreground mb-4">
                 Hubungi kami via WhatsApp
               </p>
@@ -34,9 +34,9 @@ export const Contact = () => {
                 </Button>
               </Link>
             </div>
-            <div className="bg-background rounded-lg p-6 border border-border">
+            <div className="bg-black/40 text-white rounded-lg p-6 border border-primary/50">
               <Instagram className="h-8 w-8 text-primary mx-auto mb-4" />
-              <h3 className="font-semibold text-secondary mb-2">Instagram</h3>
+              <h3 className="font-semibold mb-2">Instagram</h3>
               <p className="text-sm text-muted-foreground mb-4">
                 Follow us di Instagram
               </p>
@@ -50,9 +50,9 @@ export const Contact = () => {
                 </Button>
               </Link>
             </div>
-            <div className="bg-background rounded-lg p-6 border border-border">
+            <div className="bg-black/40 text-white rounded-lg p-6 border border-primary/50">
               <MessageCircle className="h-8 w-8 text-primary mx-auto mb-4" />
-              <h3 className="font-semibold text-secondary mb-2">Email</h3>
+              <h3 className="font-semibold mb-2">Email</h3>
               <p className="text-sm text-muted-foreground mb-4">
                 Kirim pertanyaan detail via email
               </p>
@@ -71,7 +71,7 @@ export const Contact = () => {
             >
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-secondary font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
                 Schedule Free Consultation
                 <ArrowRight className="ml-2 h-4 w-4" />
